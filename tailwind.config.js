@@ -2,7 +2,13 @@
 export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'inter': ['Inter Tight', 'serif'],
+        'playfairDisplay': [
+          'Playfair Display', 'serif']
+      },
+    },
   },
   plugins: [],
 }
