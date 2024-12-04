@@ -12,11 +12,11 @@
     </div>
   </a>
   <div class="flex gap-10 font-normal items-center justify-center">
-    <a href="#howitworks">How it works</a>
-    <a href="#services">Our Services</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#faqs">FAQs</a>
-    <a href="#invisiblegrills">Invisible Grills</a>
+    <a href="/">How it works</a>
+    <a href="/">Our Services</a>
+    <a href="/">Portfolio</a>
+    <a href="/">FAQs</a>
+    <a href="/">Invisible Grills</a>
   </div>
   <div><ContactUsButton /></div>
 </div>
