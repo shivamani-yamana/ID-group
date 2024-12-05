@@ -1,14 +1,14 @@
 <script lang="ts">
   import VideoPlayer from "../components/VideoPlayer.svelte";
   import OurHighlightsSection from "../components/OurHighlightsSection.svelte";
+  import TestimonialSectionLp from "../components/TestimonialSectionLP.svelte";
 </script>
 
 <svelte:head>
   <title>INDUS DESIGN STUDIO</title>
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
-
-<section class="pt-24 w-full">
+<section class="pt-24 w-screen">
   <div class="flex flex-col md:gap-[60px] gap-[64px]">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
@@ -38,5 +38,9 @@
       </div>
     </div>
     <OurHighlightsSection />
+  </div>
+  <!-- Full-width testimonial section -->
+  <div class="w-full px-4 md:px-20 py-[4rem] md:py-[6.25rem]">
+    <TestimonialSectionLp />
   </div>
 </section>
