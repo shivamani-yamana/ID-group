@@ -1,6 +1,6 @@
 <script>
-    import idstudioLogo from "../lib/images/Idstudio_logo.svg";
-    import upArrow from "../lib/images/up-arrow.svg";
+    import idstudioLogo from "/src/lib/images/Idstudio_logo.svg";
+    import upArrow from "/src/lib/images/up-arrow.svg";
     let anchorStyle = "{text-[#292929] font-inter-tight text-[12px] font-light leading-[14.4px] lg:text-[20px] lg:leading-[28px] lg:font-light}";
 </script>
 
