@@ -1,6 +1,7 @@
 <script lang="ts">
   import VideoPlayer from "../components/VideoPlayer.svelte";
   import OurHighlightsSection from "../components/OurHighlightsSection.svelte";
+  import ContactUs from "$components/ContactUs.svelte";
 </script>
 
 <svelte:head>
@@ -38,5 +39,9 @@
       </div>
     </div>
     <OurHighlightsSection />
+    <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+      <ContactUs />
+      <div></div>
+    </div>
   </div>
 </section>
