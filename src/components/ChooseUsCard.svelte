@@ -1,5 +1,5 @@
 <script>
-    import Frame1 from "/src/lib/icons/frame1.svg";
+    import Frame1 from "/src/lib/images/frame1.svg";
     export let data = {
         Icon: Frame1,
         Title: "Custom Design & Efficiency",

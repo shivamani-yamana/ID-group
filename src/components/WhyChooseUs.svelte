@@ -3,6 +3,11 @@
     import ChooseUsCard from "./ChooseUsCard.svelte";
     import NextButton from "./NextButton.svelte";
     import PreviousButton from "./PreviousButton.svelte";
+    import Frame1 from "/src/lib/images/frame1.svg";
+    import Frame2 from "/src/lib/images/frame2.svg";
+    import Frame3 from "/src/lib/images/frame3.svg";
+    import Frame4 from "/src/lib/images/frame4.svg";
+    import Frame5 from "/src/lib/images/frame5.svg";
 
     interface CardData {
         Icon: string;
@@ -14,35 +19,35 @@
 
     const cardData: CardData[] = [
         {
-            Icon: "/src/lib/icons/frame1.svg",
+            Icon: Frame1,
             Title: "Custom Design & Efficiency",
             Description: "Tailored modular kitchens that optimize storage and functionality for your unique space.",
             Color1: "#ECFFeC",
             Color2: "#14B037"
         },
         {
-            Icon: "/src/lib/icons/frame2.svg",
+            Icon: Frame2,
             Title: "Quality & Durability",
             Description: "High-quality materials and craftsmanship for long-lasting, beautiful results.",
             Color1: "#F6F4FF",
             Color2: "#855CFE"
         },
         {
-            Icon: "/src/lib/icons/frame3.svg",
+            Icon: Frame3,
             Title: "End to End Handling",
             Description: "We manage every aspect of your project from start to finish, ensuring a seamless and stress-free experience",
             Color1: "#E8F3FF",
             Color2: "#1D6AC4"
         },
         {
-            Icon: "/src/lib/icons/frame4.svg",
+            Icon: Frame4,
             Title: "After Sales Support",
             Description: "Comprehensive support ensures your continued satisfaction long after project completion",
             Color1: "#FFF7EF",
             Color2: "#FF9327"
         },
         {
-            Icon: "/src/lib/icons/frame5.svg",
+            Icon: Frame5,
             Title: "Years of Experience",
             Description: "Decades of expertise ensure exceptional quality and results in every project we undertake",
             Color1: "#FFEEFA",
