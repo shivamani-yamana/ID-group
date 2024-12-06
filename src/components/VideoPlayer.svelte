@@ -7,17 +7,14 @@
   let isPlaying = false;
   let isBuffering = false;
   let videoElement: HTMLVideoElement;
-  let showPauseButton = false;
 
   const togglePlay = () => {
     if (videoElement.paused) {
       videoElement.play();
       isPlaying = true;
-      showPauseButton = true;
     } else {
       videoElement.pause();
       isPlaying = false;
-      showPauseButton = false;
     }
   };
 
@@ -25,30 +22,20 @@
     if (isPlaying) {
       videoElement.pause();
       isPlaying = false;
-      showPauseButton = false;
     } else {
       videoElement.play();
       isPlaying = true;
-      showPauseButton = true;
     }
   };
 </script>
 
-<div
-  class="relative w-cover mx-auto bg-gray-50 rounded-md shadow-md overflow-hidden"
->
+<div class="relative bg-gray-50 rounded-md shadow-md overflow-hidden w-full">
   <video
     bind:this={videoElement}
     src={videoLink}
     class="w-full h-auto bg-black"
-    on:play={() => {
-      isPlaying = true;
-      showPauseButton = false;
-    }}
-    on:pause={() => {
-      isPlaying = false;
-      showPauseButton = false;
-    }}
+    on:play={() => (isPlaying = true)}
+    on:pause={() => (isPlaying = false)}
     on:waiting={() => (isBuffering = true)}
     on:playing={() => (isBuffering = false)}
     on:click={handleVideoClick}
@@ -91,33 +78,6 @@
           class="w-10 h-10"
         >
           <polygon points="5 3 19 12 5 21 5 3" />
-        </svg>
-      </div>
-    </button>
-  {/if}
-
-  {#if showPauseButton}
-    <button
-      class="absolute inset-0 flex items-center justify-center bg-black/40 z-10"
-      on:click={togglePlay}
-      aria-label="Pause"
-      transition:fade={{ delay: 1000, duration: 1000 }}
-    >
-      <div
-        class="w-16 h-16 bg-gray-800/70 rounded-full flex items-center justify-center"
-      >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          fill="none"
-          stroke="white"
-          stroke-width="2"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          class="w-10 h-10"
-        >
-          <rect x="6" y="4" width="4" height="16" />
-          <rect x="14" y="4" width="4" height="16" />
         </svg>
       </div>
     </button>

@@ -1,6 +1,9 @@
 <script lang="ts">
   import VideoPlayer from "../components/VideoPlayer.svelte";
   import OurHighlightsSection from "../components/OurHighlightsSection.svelte";
+  import OurServicesSection from "$components/OurServicesSection.svelte";
+  import ContactUs from "$components/ContactUs.svelte";
+  import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
 </script>
 
 <svelte:head>
@@ -8,7 +11,7 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="pt-24 w-full">
+<section class="pt-24 w-screen">
   <div class="flex flex-col md:gap-[60px] gap-[64px]">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
@@ -38,5 +41,13 @@
       </div>
     </div>
     <OurHighlightsSection />
+    <div class="w-full px-4 md:px-20 py-[0rem] md:py-[6.25rem]">
+      <TestimonialSectionLp />
+    </div>
+    <OurServicesSection />
+    <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+      <ContactUs />
+      <div></div>
+    </div>
   </div>
 </section>
