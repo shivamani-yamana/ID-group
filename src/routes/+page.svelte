@@ -4,6 +4,7 @@
   import OurServicesSection from "$components/OurServicesSection.svelte";
   import ContactUs from "$components/ContactUs.svelte";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
+  import PhotosInstallationSection from "$components/PhotosInstallationSection.svelte";
 </script>
 
 <svelte:head>
@@ -45,6 +46,9 @@
       <TestimonialSectionLp />
     </div>
     <OurServicesSection />
+    <div class="w-full py-[0rem] md:py-[6.25rem]">
+      <PhotosInstallationSection />
+    </div>
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
       <ContactUs />
       <div></div>
