@@ -4,9 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        'inter': ['Inter Tight', 'serif'],
-        'playfairDisplay': [
-          'Playfair Display', 'serif']
+        'inter-tight': ['Inter Tight', 'sans-serif'],
+        'playfairDisplay': ['Playfair Display', 'serif']
       },
     },
   },
