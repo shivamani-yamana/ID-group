@@ -1,6 +1,7 @@
 <script lang="ts">
   import VideoPlayer from "../components/VideoPlayer.svelte";
   import OurHighlightsSection from "../components/OurHighlightsSection.svelte";
+  import OurServicesSection from "$components/OurServicesSection.svelte";
 </script>
 
 <svelte:head>
@@ -38,5 +39,6 @@
       </div>
     </div>
     <OurHighlightsSection />
+    <OurServicesSection />
   </div>
 </section>
