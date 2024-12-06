@@ -20,6 +20,10 @@
       resultPara:
         "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna dolore nonumy eirmod tempor invidunt ut.",
       rating: 5,
+      beforeImage:
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      afterImage:
+        "https://plus.unsplash.com/premium_photo-1664301231899-5a7b1a621238?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       userImage:
@@ -29,6 +33,10 @@
       resultHeading: "Result 2",
       resultPara: "Another result description here.",
       rating: 5,
+      beforeImage:
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      afterImage:
+        "https://plus.unsplash.com/premium_photo-1664301231899-5a7b1a621238?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
     {
       userImage:
@@ -38,6 +46,10 @@
       resultHeading: "Result 3",
       resultPara: "Third result description here.",
       rating: 5,
+      beforeImage:
+        "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      afterImage:
+        "https://plus.unsplash.com/premium_photo-1664301231899-5a7b1a621238?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
     },
   ];
 

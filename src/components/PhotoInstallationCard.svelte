@@ -7,6 +7,8 @@
   export let resultHeading = "";
   export let resultPara = "";
   export let rating;
+  export let beforeImage = "";
+  export let afterImage = "";
 </script>
 
 <div
@@ -15,10 +17,7 @@
   <div
     class="w-[396px] md:w-[650px] h-[260px] md:h-[420px] flex items-center justify-center overflow-hidden rounded-lg"
   >
-    <CompareImageSlider
-      beforeImage="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-      afterImage="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-    />
+    <CompareImageSlider {beforeImage} {afterImage} />
   </div>
   <div
     class="flex flex-col w-full md:w-[32rem] justify-between h-auto md:h-[420px] gap-6 md:gap-0"
