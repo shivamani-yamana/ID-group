@@ -2,6 +2,7 @@
   import ServicesCard from "./ServicesCard.svelte";
   import rightarrowicon from "../lib/icons/right_arrow.png";
   import whatsappicon from "../lib/icons/whatsapp_icon.png";
+  import SectionButton from "./SectionButton.svelte";
 
   const cardData = [
     {
@@ -11,7 +12,7 @@
       description:
         "Optimize your kitchen space with customized, stylish, and efficient modular designs.",
       iconText: "Contact Us",
-      icon: whatsappicon, // Passing as inline SVG
+      icon: rightarrowicon, // Passing as inline SVG
     },
     {
       cardImage:
@@ -20,7 +21,7 @@
       heading: "Living Room Design",
       description:
         "Create a relaxing and functional living room with our expert designs.",
-      iconText: "Learn More",
+      iconText: "Contact Us",
       icon: rightarrowicon, // Another icon example
     },
     {
@@ -30,7 +31,7 @@
       heading: "Living Room Design",
       description:
         "Create a relaxing and functional living room with our expert designs.",
-      iconText: "Learn More",
+      iconText: "Contact Us",
       icon: rightarrowicon, // Another icon example
     },
     // Add more card objects here
@@ -39,6 +40,7 @@
 
 <div class="bg-pattern px-4 py-6 md:px-20 md:py-16">
   <div class="flex items-center flex-col gap-3 md:gap-5">
+    <SectionButton text="Our Services" />
     <h2
       class="text-center font-playfairDisplay font-medium text-2xl md:text-4xl text-gray-900"
     >

@@ -140,7 +140,7 @@
   <!-- Mobile Menu -->
   {#if isMenuOpen}
     <div
-      class="absolute top-24 left-0 w-full bg-white shadow-md md:hidden flex flex-col gap-6 px-4 h-screen text-start"
+      class="absolute top-20 left-0 w-full bg-white shadow-md md:hidden flex flex-col gap-6 px-4 h-screen text-start"
       in:fade={{ duration: 300 }}
       out:fade={{ duration: 300 }}
     >
