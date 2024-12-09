@@ -55,32 +55,91 @@
         }
     ];
 
-    let scrollContainer: HTMLElement | null = null; // Explicitly type the variable
+    let scrollContainer: HTMLElement | null = null;
+    let SCROLL_DISTANCE = 460;
+    let isAtStart = true;
+    let isAtEnd = false;
 
-    // Scroll the container by a smaller distance
-    const SCROLL_DISTANCE = 340; // Set the distance to scroll in pixels
+    // Dynamically calculate the current index
+    const getCurrentIndex = (): number => {
+        if (scrollContainer) {
+            return Math.round(scrollContainer.scrollLeft / SCROLL_DISTANCE);
+        }
+        return 0;
+    };
 
+    // Update scroll tracking
+    const updateScrollTracking = () => {
+        if (scrollContainer) {
+            const { scrollLeft, scrollWidth, clientWidth } = scrollContainer;
+            isAtStart = scrollLeft === 0;
+            isAtEnd = Math.ceil(scrollLeft + clientWidth) >= scrollWidth;
+        }
+    };
+
+    // Navigate to the next card
     const nextSlide = () => {
         if (scrollContainer) {
-            scrollContainer.scrollBy({
-                left: SCROLL_DISTANCE, // Scroll by a smaller fixed distance
-                behavior: "smooth"
-            });
+            const currentIndex = getCurrentIndex();
+            if (isAtEnd) {
+                scrollContainer.scrollTo({
+                    left: 0,
+                    behavior: "smooth"
+                });
+            } else {
+                scrollContainer.scrollTo({
+                    left: (currentIndex + 1) * SCROLL_DISTANCE,
+                    behavior: "smooth"
+                });
+            }
         }
     };
 
+    // Navigate to the previous card
     const prevSlide = () => {
         if (scrollContainer) {
-            scrollContainer.scrollBy({
-                left: -SCROLL_DISTANCE, // Scroll by a smaller fixed distance
-                behavior: "smooth"
-            });
+            const currentIndex = getCurrentIndex();
+            if (isAtStart) {
+                scrollContainer.scrollTo({
+                    left: (cardData.length - 1) * SCROLL_DISTANCE,
+                    behavior: "smooth"
+                });
+            } else {
+                scrollContainer.scrollTo({
+                    left: (currentIndex - 1) * SCROLL_DISTANCE,
+                    behavior: "smooth"
+                });
+            }
         }
     };
+
+    // Update scroll distance based on screen size
+    const updateScrollDistance = () => {
+        if (window.innerWidth < 768) {
+            SCROLL_DISTANCE = 340; // For mobile
+        } else if (window.innerWidth < 1280) {
+            SCROLL_DISTANCE = 500; // For medium screens
+        } else {
+            SCROLL_DISTANCE = 460; // For larger screens
+        }
+    };
+
+    // Attach event listener for scrolling
+    onMount(() => {
+        updateScrollDistance();
+        window.addEventListener("resize", updateScrollDistance);
+
+        if (scrollContainer) {
+            scrollContainer.addEventListener("scroll", updateScrollTracking);
+        }
+
+        return () => {
+            window.removeEventListener("resize", updateScrollDistance);
+        };
+    });
 </script>
 
 <style>
-    /* Hide scrollbar but enable scrolling */
     .hide-scrollbar {
         scrollbar-width: none; /* For Firefox */
         -ms-overflow-style: none; /* For Internet Explorer and Edge */
@@ -88,6 +147,18 @@
 
     .hide-scrollbar::-webkit-scrollbar {
         display: none; /* For Chrome, Safari, and Opera */
+    }
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+        .scroll-card {
+            width: calc(50% - 16px); /* Two cards per row, with a gap */
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .scroll-card {
+            width: calc(33.33% - 16px); /* Three cards per row */
+        }
     }
 </style>
 
@@ -110,7 +181,7 @@
             class="flex overflow-x-auto w-full gap-4 hide-scrollbar"
         >
             {#each cardData as card, i}
-                <div class="flex-shrink-0 w-[90%] sm:w-1/3 px-2">
+                <div class="flex-shrink-0 scroll-card px-2">
                     <ChooseUsCard data={card} />
                 </div>
             {/each}
