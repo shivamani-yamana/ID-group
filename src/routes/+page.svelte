@@ -4,6 +4,8 @@
   import OurServicesSection from "$components/OurServicesSection.svelte";
   import ContactUs from "$components/ContactUs.svelte";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
+  import Faq from "$components/FAQ.svelte";
+  import WhyChooseUs from "$components/WhyChooseUs.svelte";
 </script>
 
 <svelte:head>
@@ -46,6 +48,8 @@
     </div>
     <OurServicesSection />
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+      <WhyChooseUs />
+      <Faq />
       <ContactUs />
       <div></div>
     </div>
