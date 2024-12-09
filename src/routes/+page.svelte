@@ -5,6 +5,7 @@
   import ContactUs from "$components/ContactUs.svelte";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import Faq from "$components/FAQ.svelte";
+  import PhotosInstallationSection from "$components/PhotosInstallationSection.svelte";
   import WhyChooseUs from "$components/WhyChooseUs.svelte";
 </script>
 
@@ -47,6 +48,9 @@
       <TestimonialSectionLp />
     </div>
     <OurServicesSection />
+    <div class="w-full py-[0rem] md:py-[6.25rem]">
+      <PhotosInstallationSection />
+    </div>
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
       <WhyChooseUs />
       <Faq />
