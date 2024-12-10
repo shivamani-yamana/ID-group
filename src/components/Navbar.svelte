@@ -129,7 +129,7 @@
 
     <a href="/" class="text-black hover:text-gray-600">Portfolio</a>
     <a href="/" class="text-black hover:text-gray-600">FAQs</a>
-    <a href="/" class="text-black hover:text-gray-600">Invisible Grills</a>
+    <a href="./invisible-grills" class="text-black hover:text-gray-600">Invisible Grills</a>
   </div>
 
   <!-- Contact Us Button -->
