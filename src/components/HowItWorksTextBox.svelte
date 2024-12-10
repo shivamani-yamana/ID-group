@@ -30,12 +30,28 @@
 
     // Check every second
     onMount(() => {
+    let currentSecond = new Date().getSeconds();
+    // console.log(currentSecond);
+
+    const startInterval = () => {
         const interval = setInterval(() => {
             checkHighlight();
-        }, 2000); // Check every second
+        }, 2000); // Check every 2 seconds
+        // return () => clearInterval(interval); // Uncomment for cleanup on unmount
+    };
 
-        // return () => clearInterval(interval); // Cleanup on unmount
-    });
+    if (currentSecond % 2 === 1) {
+        // Delay until the next even second
+        setTimeout(() => {
+            checkHighlight(); // Call immediately on the next even second
+            startInterval(); // Start the regular interval
+        }, 1000); // Wait 1 second
+    } else {
+        checkHighlight(); // Call immediately if already on an even second
+        startInterval(); // Start the regular interval
+    }
+});
+
 </script>
 
 <style>
