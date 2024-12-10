@@ -5,6 +5,12 @@
 
   let isMenuOpen = false; // State for mobile menu
   let isServicesOpen = false; // State for services dropdown
+  let services = [
+    { service: "Modular Kitchen", link: "/" },
+    { service: "Interior Design", link: "/" },
+    { service: "No Grills", link: "/" },
+    { service: "Design Consultation", link: "/" },
+  ];
 </script>
 
 <!-- Navbar Component -->
@@ -110,19 +116,15 @@
       </button>
       {#if isServicesOpen}
         <div
-          class="absolute bg-white shadow-lg w-48 mt-2 flex flex-col gap-2 py-2 -left-12"
+          class="absolute bg-white shadow-lg w-48 mt-2 flex flex-col py-2 -left-12 rounded-[4px]"
           in:slide={{ duration: 300 }}
           out:slide={{ duration: 300 }}
         >
-          <a href="/" class="text-black hover:text-gray-600 px-4 py-2"
-            >Service 1</a
-          >
-          <a href="/" class="text-black hover:text-gray-600 px-4 py-2"
-            >Service 2</a
-          >
-          <a href="/" class="text-black hover:text-gray-600 px-4 py-2"
-            >Service 3</a
-          >
+          {#each services as { service, link }}
+            <a href={link} class="text-black hover:text-gray-600 px-4 py-2"
+              >{service}</a
+            >
+          {/each}
         </div>
       {/if}
     </div>
@@ -144,57 +146,99 @@
       in:fade={{ duration: 300 }}
       out:fade={{ duration: 300 }}
     >
-      <a href="/" class="text-black hover:text-gray-600 w-full border-b-2 py-6"
+      <a href="/" class="text-black hover:text-gray-600 w-full border-b-2 py-5"
         >How it works</a
       >
 
       <!-- Services Dropdown (Mobile) -->
-      <div class="relative w-full flex flex-col border-b-2 py-6">
-        <div class="flex">
-          <button
-            class="text-black hover:text-gray-600 w-full text-start"
-            on:click={() => (isServicesOpen = !isServicesOpen)}
-          >
-            Our Services
-          </button>
-        </div>
+      <div
+        class={`relative w-full flex flex-col ${isServicesOpen ? "border-b-0" : "border-b-[0.5px]"}`}
+      >
+        <button
+          class="text-black hover:text-gray-600 text-start py-5 w-full flex justify-between items-center"
+          on:click={() => (isServicesOpen = !isServicesOpen)}
+        >
+          Our Services
+          <div class="flex items-center justify-center w-6 h-6">
+            <div
+              class={`transition-all ease-in-out origin-center ${isServicesOpen ? "rotate-180" : "rotate-0"}`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_886_14328)">
+                  <path
+                    d="M18 9L12 15L6 9"
+                    stroke="#292929"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_886_14328">
+                    <rect
+                      width="24"
+                      height="24"
+                      fill="white"
+                      transform="matrix(0 1 -1 0 24 0)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+        </button>
 
         {#if isServicesOpen}
           <div
-            class="bg-white w-full mt-2 flex flex-col items-start gap-2 py-2 text-start"
+            class="bg-white w-full flex flex-col items-start pb-2 text-start border-b-[0.5px]"
             in:slide={{ duration: 300 }}
             out:slide={{ duration: 300 }}
           >
-            <a
-              href="/"
-              class="text-black hover:text-gray-600 px-4 py-2 w-full border-b-2"
-              >Service 1</a
-            >
-            <a
-              href="/"
-              class="text-black hover:text-gray-600 px-4 py-2 w-full border-b-2"
-              >Service 2</a
-            >
-            <a href="/" class="text-black hover:text-gray-600 px-4 pt-2 w-full"
-              >Service 3</a
-            >
+            {#each services as { service, link }, index}
+              {#if index === services.length - 1}
+                <a
+                  href={link}
+                  class="text-[#888] hover:text-gray-600 py-2 w-full flex items-center"
+                  >{service}</a
+                >
+              {:else if index === 0}
+                <a
+                  href={link}
+                  class="text-[#888] hover:text-gray-600 py-2 w-full flex items-center border-y-[0.5px]"
+                  >{service}</a
+                >
+              {:else}
+                <a
+                  href={link}
+                  class="text-[#888] hover:text-gray-600 py-2 w-full border-b-[0.5px] flex items-center"
+                >
+                  {service}
+                </a>
+              {/if}
+            {/each}
           </div>
         {/if}
       </div>
 
       <a
         href="/"
-        class="text-black hover:text-gray-600 w-full text-start border-b-2 py-6"
+        class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >Portfolio</a
       >
       <a
         href="/"
-        class="text-black hover:text-gray-600 w-full text-start border-b-2 py-6"
+        class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >FAQs</a
       >
       <a
         href="/"
-        class="text-black hover:text-gray-600 w-full text-start border-b-2 py-6"
+        class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >Invisible Grills</a
       >
 

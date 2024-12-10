@@ -7,6 +7,7 @@
   let position = 50;
 
   function handleMouseDown(event: MouseEvent) {
+    event.stopPropagation(); // Prevent the event from triggering parent handlers
     isDragging = true;
     handleMouseMove(event);
   }
@@ -22,8 +23,8 @@
   function handleMouseUp() {
     isDragging = false;
   }
-
   function handleTouchMove(event: TouchEvent) {
+    event.stopPropagation(); // Prevent the event from triggering parent handlers
     if (!isDragging) return;
 
     const touch = event.touches[0];
@@ -50,9 +51,10 @@
   on:mouseup={handleMouseUp}
   on:mouseleave={handleMouseUp}
   on:mousemove={handleMouseMove}
-  on:touchend={handleMouseUp}
-  on:touchcancel={handleMouseUp}
-  on:touchmove|preventDefault={handleTouchMove}
+  on:touchend|preventDefault|stopPropagation={handleMouseUp}
+  on:touchcancel|preventDefault|stopPropagation={handleMouseUp}
+  on:touchmove|preventDefault|stopPropagation={handleTouchMove}
+  on:touchstart|stopPropagation={() => (isDragging = true)}
 >
   <!-- After image (full width) -->
   <img
