@@ -7,6 +7,7 @@
   import Faq from "$components/FAQ.svelte";
   import PhotosInstallationSection from "$components/PhotosInstallationSection.svelte";
   import WhyChooseUs from "$components/WhyChooseUs.svelte";
+  import HowItWorks from "$components/HowItWorks.svelte";
 </script>
 
 <svelte:head>
@@ -14,7 +15,7 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
-<section class="pt-24 w-screen">
+<section class="pt-24">
   <div class="flex flex-col md:gap-[60px] gap-[64px]">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
@@ -52,6 +53,7 @@
       <PhotosInstallationSection />
     </div>
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+      <HowItWorks />
       <WhyChooseUs />
       <Faq />
       <ContactUs />

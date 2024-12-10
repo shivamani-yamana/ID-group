@@ -9,7 +9,7 @@
 
 <!-- Navbar Component -->
 <div
-  class="flex justify-between items-center bg-white opacity-100 px-4 md:px-20 py-6 fixed w-full font-inter z-20"
+  class="flex justify-between items-center bg-white opacity-100 px-4 md:px-20 py-6 fixed w-full font-inter-tight z-20"
 >
   <!-- Logo -->
   <a href="/">
