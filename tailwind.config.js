@@ -7,6 +7,9 @@ export default {
         'inter-tight': ['Inter Tight', 'sans-serif'],
         'playfairDisplay': ['Playfair Display', 'serif']
       },
+      screens: {
+        '1410': '1410px', // Custom breakpoint at 1410px
+      },
     },
   },
   plugins: [],

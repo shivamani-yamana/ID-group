@@ -1,6 +1,6 @@
 <script lang="ts">
     import VideoPlayer from "./VideoPlayer.svelte";
-    export let backgroundColor = "#DFE0AF"; // Passed as a prop
+    export let backgroundColor; // Passed as a prop
     export let testimonialText;
     export let customerName;
     export let customerContext;
