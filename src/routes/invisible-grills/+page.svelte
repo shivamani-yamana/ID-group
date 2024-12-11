@@ -108,7 +108,7 @@
 </svelte:head>
 
 <section class="pt-24">
-    <div class="flex flex-col md:gap-[100px] gap-[40px]">
+    <div class="flex flex-col md:gap-[0px] gap-[40px]">
         <div class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center">
             <div class="text-[#292929] text-center md:text-left flex md:flex-row flex-col justify-between items-center w-full md:gap-0 gap-3">
               <h1 class="font-playfairDisplay text-[28px] md:text-[50px] md:leading-[70px] font-[600] leading-8 w-full md:w-[600px]">
@@ -131,11 +131,12 @@
         <div class="w-full py-[0rem] md:py-[6.25rem]">
           <PhotosOfInstalltionGrills />
         </div>
-        <div class="w-full px-4 md:px-20">
+        <div class="w-full md:mb-[100px] px-4 md:px-20">
             <TestimonialSectionLp testimonialHeader="Trusted by Homeowners Everywhere!" testimonials={testimonials} bgColor="#F3F0EB"/>
         </div>
-        <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+        <div class="flex flex-col sm:gap-[100px]">
           <ContactUs />
+          <div></div>
         </div>
     </div>
 </section>
