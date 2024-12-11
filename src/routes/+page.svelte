@@ -6,6 +6,9 @@
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import Faq from "$components/FAQ.svelte";
   import PhotosInstallationSection from "$components/PhotosInstallationSection.svelte";
+
+
+  import ProjectGallerySection from "$components/ProjectGallerySection.svelte";
   import WhyChooseUs from "$components/WhyChooseUs.svelte";
   import HowItWorks from "$components/HowItWorks.svelte";
   import Frame1 from "/src/lib/images/frame1.svg";
@@ -168,9 +171,14 @@
     <div class="w-full px-4 md:px-20 py-[0rem] md:py-[6.25rem]">
       <TestimonialSectionLp testimonialHeader="Here’s what others have to say<br />about INDUS Studio" testimonials={testimonials} bgColor="#DFE0AF"/>
     </div>
+
     <OurServicesSection cardData={ServiceCardData} sectionTitle="Our Services" headerText="Explore Our Comprehensive<br/>Interior Design Services"/>
     <div class="w-full py-[0rem] md:py-[6.25rem]">
+
       <PhotosInstallationSection />
+    </div>
+    <div class="w-full py-[0rem] md:py-[6.25rem]">
+      <ProjectGallerySection />
     </div>
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
       <HowItWorks />
