@@ -39,6 +39,7 @@
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import ContactUs from "$components/ContactUs.svelte";
   import PhotosOfInstalltionGrills from "$components/photosOfInstalltionGrills.svelte";
+  import HowDoesItWork from "$components/HowDoesItWork.svelte";
 
   const invisibleGrillsType = [
     {
@@ -106,7 +107,7 @@
 </svelte:head>
 
 <section class="pt-24">
-  <div class="flex flex-col md:gap-[100px] gap-[64px]">
+  <div class="flex flex-col">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
     >
@@ -133,14 +134,21 @@
         <img src="src/lib/images/invisible_grills.png" alt="" class="w-full" />
       </div>
     </div>
-    <WhyChooseUs {cardData} />
+    <div class="mb-0 md:mb-[6.25rem]">
+      <WhyChooseUs {cardData} />
+    </div>
     <OurServicesSection
       cardData={invisibleGrillsType}
       sectionTitle="Types of Invisible Grills"
       headerText="Choose Your Ideal Invisible <br/> Grill Solution"
     />
-    <div class="w-full py-[0rem] md:py-[6.25rem]">
+    <div class="w-full pt-[0rem] md:pt-[6.25rem] mb-[4rem] md:mb-[6.25rem]">
       <PhotosOfInstalltionGrills />
+    </div>
+    <div
+      class="w-full py-[4rem] md:py-[2.5rem] mb-[4rem] md:mb-[6.25rem] bg-[#F3F0EB]"
+    >
+      <HowDoesItWork />
     </div>
     <div class="w-full px-4 md:px-20">
       <TestimonialSectionLp
