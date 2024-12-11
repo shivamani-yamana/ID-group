@@ -3,43 +3,18 @@
     import PreviousButton from "./PreviousButton.svelte";
     import NextButton from "./NextButton.svelte";
     import SectionButton from "./SectionButton.svelte";
+
+
+    export let testimonialHeader;
+    export let bgColor;
+    export let testimonials;
+
     let currentIndex = 0;
     let isTransitioning = false;
     let startX: number = 0;
     let endX: number = 0;
     let transitionClass = "transition-transform duration-500 ease-in-out";
-    const testimonials = [
-      {
-        testimonialText:
-          "“ Grabbing and holding your audience's attention: This is crucial in a world filled with distractions. It's about creating content that immediately captures ”",
-        customerName: "John Doe",
-        customerContext: "Founder, InnovaTech Solutions",
-        imageUrl:
-          "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-        videoLink:
-          "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=obIW7hjJKVaz1D05wGvhzZMIvt-oe01ZJO2XU17AwEGi2T6L1UoOZZTz8SYg9~8SXdeXxyDkJsWVjZLhmrScyzkxyhIkWSaU9z3CDaJzT3QjbLHtjIxJHXmbgm9MlmPUT870v3nHx~ZIlLXEn0f1bxEEn1WKindYYQJP0f8BIXwlIw04nstwGrUcy6Ybzm-QqHL8BlhFBXbtAmuYI72SXjIrO0OAY9bCw2FfVXyzJ~DNGX9zd1vw65eDrLce~CAl~Ypa~B3Fq9LN3BCW7us~zZ8fw1rlrqmEJIU0KearWSpaK0ER3DigxWhxLqCesM6MGmKke-HzqUjQv5zJMEpp-w__",
-      },
-      {
-        testimonialText:
-          "“ Grabbing and holding your audience's attention: This is crucial in a world filled with distractions. It's about creating content that immediately captures ”",
-        customerName: "Jane Smith",
-        customerContext: "CEO, Bright Future Inc.",
-        imageUrl:
-          "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-        videoLink:
-          "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c",
-      },
-      {
-        testimonialText:
-          "“ Grabbing and holding your audience's attention: This is crucial in a world filled with distractions. It's about creating content that immediately captures ”",
-        customerName: "Michael Johnson",
-        customerContext: "Founder, TechWave",
-        imageUrl:
-          "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-        videoLink:
-          "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c",
-      },
-    ];
+    
     const slideTo = (index: number) => {
       if (isTransitioning) return;
       isTransitioning = true;
@@ -85,7 +60,7 @@
       <h2
         class="text-center font-playfairDisplay font-medium text-2xl md:text-4xl text-gray-900"
       >
-        Here’s what others have to say<br />about INDUS Studio
+        {@html testimonialHeader}
       </h2>
     </div>
   
@@ -106,6 +81,7 @@
           customerContext={testimonials[testimonials.length - 1].customerContext}
           imageUrl={testimonials[testimonials.length - 1].imageUrl}
           videoLink={testimonials[testimonials.length - 1].videoLink}
+          backgroundColor={bgColor}
         />
   
         <!-- Main Testimonials -->
@@ -116,6 +92,7 @@
             customerContext={testimonial.customerContext}
             imageUrl={testimonial.imageUrl}
             videoLink={testimonial.videoLink}
+            backgroundColor={bgColor}
           />
         {/each}
   
@@ -126,6 +103,7 @@
           customerContext={testimonials[0].customerContext}
           imageUrl={testimonials[0].imageUrl}
           videoLink={testimonials[0].videoLink}
+          backgroundColor={bgColor}
         />
       </div>
     </div>

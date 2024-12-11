@@ -1,6 +1,6 @@
 <script>
   import ConnectWithUsOn from "./ConnectWithUsOn.svelte";
-import ContactUsForm from "./ContactUsForm.svelte";
+  import ContactUsForm from "./ContactUsForm.svelte";
   import GetInTouch from "./GetInTouch.svelte";
 
 </script>
