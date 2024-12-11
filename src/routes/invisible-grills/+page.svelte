@@ -39,6 +39,7 @@
   import rightarrowicon from "$lib/icons/right_arrow.png";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import ContactUs from "$components/ContactUs.svelte";
+  import ComparativeAnalysis from "$components/ComparativeAnalysis.svelte";
 
 
   const invisibleGrillsType = [
@@ -103,8 +104,8 @@
 
 </script>
 <svelte:head>
-  <title>INDUS DESIGN STUDIO</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>INVISIBLE GRILLS</title>
+  <meta name="description" content="Invisible grills" />
 </svelte:head>
 
 <section class="pt-24">
@@ -122,12 +123,16 @@
               <img src="src/lib/images/invisible_grills.png" alt="" class="w-full">
             </div>
         </div>
-        <WhyChooseUs cardData={cardData}/>
-        <OurServicesSection cardData={invisibleGrillsType} sectionTitle="Types of Invisible Grills" headerText="Choose Your Ideal Invisible <br/> Grill Solution"/>
+        <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+          <WhyChooseUs cardData={cardData}/>
+          <OurServicesSection cardData={invisibleGrillsType} sectionTitle="Types of Invisible Grills" headerText="Choose Your Ideal Invisible <br/> Grill Solution"/>
+        </div>
         <div class="w-full px-4 md:px-20">
             <TestimonialSectionLp testimonialHeader="Trusted by Homeowners Everywhere!" testimonials={testimonials} bgColor="#F3F0EB"/>
         </div>
-        <ContactUs />
-        <div></div>
+        <div class="flex flex-col gap-[0px] sm:gap-[100px]">
+          <ComparativeAnalysis />
+          <ContactUs />
+        </div>
     </div>
 </section>
