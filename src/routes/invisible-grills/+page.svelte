@@ -38,6 +38,8 @@
   import rightarrowicon from "$lib/icons/right_arrow.png";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import ContactUs from "$components/ContactUs.svelte";
+  import ComparativeAnalysis from "$components/ComparativeAnalysis.svelte";
+  import OurGuarantee from "$components/OurGuarantee.svelte";
   import PhotosOfInstalltionGrills from "$components/photosOfInstalltionGrills.svelte";
   import HowDoesItWork from "$components/HowDoesItWork.svelte";
 
@@ -102,11 +104,12 @@
 </script>
 
 <svelte:head>
-  <title>INDUS DESIGN STUDIO</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>INVISIBLE GRILLS</title>
+  <meta name="description" content="Invisible grills" />
 </svelte:head>
 
 <section class="pt-24">
+
   <div class="flex flex-col">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
@@ -134,14 +137,12 @@
         <img src="src/lib/images/invisible_grills.png" alt="" class="w-full" />
       </div>
     </div>
-    <div class="mb-0 md:mb-[6.25rem]">
-      <WhyChooseUs {cardData} />
-    </div>
-    <OurServicesSection
-      cardData={invisibleGrillsType}
-      sectionTitle="Types of Invisible Grills"
-      headerText="Choose Your Ideal Invisible <br/> Grill Solution"
-    />
+    <div class="flex flex-col gap-[0px] sm:gap-[60px]">
+          <WhyChooseUs cardData={cardData}/>
+          <OurServicesSection cardData={invisibleGrillsType} sectionTitle="Types of Invisible Grills" headerText="Choose Your Ideal Invisible <br/> Grill Solution"/>
+          <ComparativeAnalysis />
+          <OurGuarantee />
+        </div>
     <div class="w-full pt-[0rem] md:pt-[6.25rem] mb-[4rem] md:mb-[6.25rem]">
       <PhotosOfInstalltionGrills />
     </div>
