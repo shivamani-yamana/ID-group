@@ -38,6 +38,8 @@
   import rightarrowicon from "$lib/icons/right_arrow.png";
   import TestimonialSectionLp from "$components/TestimonialSectionLp.svelte";
   import ContactUs from "$components/ContactUs.svelte";
+  import ComparativeAnalysis from "$components/ComparativeAnalysis.svelte";
+  import OurGuarantee from "$components/OurGuarantee.svelte";
   import PhotosOfInstalltionGrills from "$components/photosOfInstalltionGrills.svelte";
 
   const invisibleGrillsType = [
@@ -101,55 +103,40 @@
 </script>
 
 <svelte:head>
-  <title>INDUS DESIGN STUDIO</title>
-  <meta name="description" content="Svelte demo app" />
+  <title>INVISIBLE GRILLS</title>
+  <meta name="description" content="Invisible grills" />
 </svelte:head>
 
 <section class="pt-24">
-  <div class="flex flex-col md:gap-[100px] gap-[64px]">
-    <div
-      class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
-    >
-      <div
-        class="text-[#292929] text-center md:text-left flex md:flex-row flex-col justify-between items-center w-full md:gap-0 gap-3"
-      >
-        <h1
-          class="font-playfairDisplay text-[28px] md:text-[50px] md:leading-[70px] font-[600] leading-8 w-full md:w-[600px]"
-        >
-          Invisible Grills<br /><span class="font-[300]"
-            >Redefining Style & Safety</span
-          >
-        </h1>
-        <p
-          class="font-inter-tight text-[14px] md:text-[20px] font-light md:leading-[32px] leading-[19.2px] w-[364px] md:w-[478px] text-[#707070] justify"
-        >
-          Upgrade your space with virtually invisible protection. Experience the
-          difference today. Chat with us and get Installed in 3 days!
-        </p>
-      </div>
-      <div
-        class="flex justify-start items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md"
-      >
-        <img src="src/lib/images/invisible_grills.png" alt="" class="w-full" />
-      </div>
+    <div class="flex flex-col md:gap-[0px] gap-[40px]">
+        <div class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center">
+            <div class="text-[#292929] text-center md:text-left flex md:flex-row flex-col justify-between items-center w-full md:gap-0 gap-3">
+              <h1 class="font-playfairDisplay text-[28px] md:text-[50px] md:leading-[70px] font-[600] leading-8 w-full md:w-[600px]">
+                Invisible Grills<br /><span class="font-[300]">Redefining Style & Safety</span>
+              </h1>
+              <p class="font-inter-tight text-[14px] md:text-[20px] font-light md:leading-[32px] leading-[19.2px] w-[364px] md:w-[478px] text-[#707070] justify">
+                Upgrade your space with virtually invisible protection. Experience the difference today. Chat with us and get Installed in 3 days!
+              </p>
+            </div>
+            <div class="flex justify-start items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md">
+              <img src="src/lib/images/invisible_grills.png" alt="" class="w-full">
+            </div>
+        </div>
+        <div class="flex flex-col gap-[0px] sm:gap-[60px]">
+          <WhyChooseUs cardData={cardData}/>
+          <OurServicesSection cardData={invisibleGrillsType} sectionTitle="Types of Invisible Grills" headerText="Choose Your Ideal Invisible <br/> Grill Solution"/>
+          <ComparativeAnalysis />
+          <OurGuarantee />
+        </div>
+        <div class="w-full py-[0rem] md:py-[6.25rem]">
+          <PhotosOfInstalltionGrills />
+        </div>
+        <div class="w-full md:mb-[100px] px-4 md:px-20">
+            <TestimonialSectionLp testimonialHeader="Trusted by Homeowners Everywhere!" testimonials={testimonials} bgColor="#F3F0EB"/>
+        </div>
+        <div class="flex flex-col sm:gap-[100px]">
+          <ContactUs />
+          <div></div>
+        </div>
     </div>
-    <WhyChooseUs {cardData} />
-    <OurServicesSection
-      cardData={invisibleGrillsType}
-      sectionTitle="Types of Invisible Grills"
-      headerText="Choose Your Ideal Invisible <br/> Grill Solution"
-    />
-    <div class="w-full py-[0rem] md:py-[6.25rem]">
-      <PhotosOfInstalltionGrills />
-    </div>
-    <div class="w-full px-4 md:px-20">
-      <TestimonialSectionLp
-        testimonialHeader="Trusted by Homeowners Everywhere!"
-        {testimonials}
-        bgColor="#F3F0EB"
-      />
-    </div>
-    <ContactUs />
-    <div></div>
-  </div>
 </section>
