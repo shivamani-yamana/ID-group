@@ -1,6 +1,7 @@
 <script lang="ts">
   export let beforeImage: string;
   export let afterImage: string;
+  export let height = "h-auto";
 
   let container: HTMLDivElement;
   let isDragging = false;
@@ -45,7 +46,7 @@
 <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
 <div
   bind:this={container}
-  class="relative w-full aspect-[4/3] select-none overflow-hidden rounded-lg"
+  class={`relative w-full aspect-[4/3] select-none overflow-hidden rounded-lg ${height}`}
   role="group"
   aria-label="Image comparison"
   on:mouseup={handleMouseUp}
