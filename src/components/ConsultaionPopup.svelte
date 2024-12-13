@@ -26,7 +26,7 @@
     transition:fade={{ duration: 500 }}
   >
     <div
-      class="flex flex-col md:flex-row w-[396px] h-[668px] p-[20px] items-center gap-[20px] flex-shrink-0 rounded-[10px] bg-white md:w-auto md:h-[428px] md:p-[20px] md:justify-center md:items-start md:gap-[34px]"
+      class="flex flex-col md:flex-row w-[396px] h-[668px] items-center gap-[20px] flex-shrink-0 rounded-[10px] bg-white md:w-auto md:h-[428px] md:p-[20px] md:justify-center md:items-start md:gap-[34px]"
       transition:scale={{ duration: 500 }}
     >
       <!-- On mobile this 2nd -->
@@ -38,11 +38,11 @@
       </div>
       <!-- Detail section -->
       <div
-        class="md:w-[18.25rem] md:order-2 h-full w-[22.75rem] md:h-auto flex flex-col gap-5 items-center justify-center overflow-hidden rounded md:rounded-[5px]"
+        class="md:w-[18.25rem] md:order-2 h-full w-full md:h-auto flex flex-col gap-5 items-center justify-center overflow-hidden rounded md:rounded-[5px]"
       >
         <!-- On mobile this first -->
         <div
-          class="w-full flex items-start md:justify-end justify-between order-1"
+          class="w-full flex items-start md:justify-end justify-between order-1 px-5 md:p-0"
         >
           <div class="block md:hidden">
             <svg
@@ -152,7 +152,7 @@
         </div>
         <!-- On mobile this 3nd -->
         <h2
-          class="text-[#111] font-medium text-[28px] leading-[33.6px] font-playfairDisplay md:text-[28px] md:leading-[33.6px] md:order-3 order-2"
+          class="text-[#111] font-medium text-[28px] leading-[33.6px] font-playfairDisplay md:text-[28px] md:leading-[33.6px] md:order-3 order-2 pt-2 px-5 md:px-0 border-t-2 md:pt-0 md:border-t-0"
         >
           Get a free design consultation with us
         </h2>
@@ -163,7 +163,7 @@
         </div>
         <!-- On mobile this 4th -->
         <form
-          class="flex flex-col items-center gap-5 md:order-4 order-3 w-full"
+          class="flex flex-col items-center gap-5 md:order-4 order-3 w-full px-5 md:px-0"
         >
           <div class="flex flex-col gap-5 md:scale-90 w-full">
             <FormBlockType1 Label="Name" Value="John Doe" />
