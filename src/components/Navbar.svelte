@@ -237,7 +237,7 @@
         >FAQs</a
       >
       <a
-        href="/"
+        href="./invisible-grills"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >Invisible Grills</a
       >

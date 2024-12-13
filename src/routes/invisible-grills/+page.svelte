@@ -43,6 +43,8 @@
   import PhotosOfInstalltionGrills from "$components/photosOfInstalltionGrills.svelte";
   import HowDoesItWork from "$components/HowDoesItWork.svelte";
 
+  import invisibleGrills from "$lib/images/invisible_grills.png";
+
   const invisibleGrillsType = [
     {
       cardImage: mosquitoNet,
@@ -109,7 +111,6 @@
 </svelte:head>
 
 <section class="pt-24">
-
   <div class="flex flex-col">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
@@ -134,7 +135,7 @@
       <div
         class="flex justify-start items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md"
       >
-        <img src="src/lib/images/invisible_grills.png" alt="" class="w-full" />
+        <img src="{invisibleGrills}" alt="" class="w-full">
       </div>
     </div>
     <div class="flex flex-col gap-[0px] sm:gap-[60px]">
