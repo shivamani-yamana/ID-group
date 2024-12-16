@@ -5,11 +5,12 @@
 
   let isMenuOpen = false; // State for mobile menu
   let isServicesOpen = false; // State for services dropdown
-  let services = [
-    { service: "Modular Kitchen", link: "/" },
-    { service: "Interior Design", link: "/" },
-    { service: "No Grills", link: "/" },
-    { service: "Design Consultation", link: "/" },
+
+  export let services = [
+    { service: "Modular Kitchen", link: "#service" },
+    { service: "Interior Design", link: "#service" },
+    { service: "No Grills", link: "#service" },
+    { service: "Design Consultation", link: "#service" },
   ];
 </script>
 
@@ -103,7 +104,7 @@
 
   <!-- Desktop Navigation Links -->
   <div class="hidden md:flex gap-10 items-center">
-    <a href="/" class="text-black hover:text-gray-600">How it works</a>
+    <a href="#how-it-works" class="text-black hover:text-gray-600">How it works</a>
 
     <!-- Services Dropdown -->
     <div class="relative">
@@ -129,8 +130,8 @@
       {/if}
     </div>
 
-    <a href="/" class="text-black hover:text-gray-600">Portfolio</a>
-    <a href="/" class="text-black hover:text-gray-600">FAQs</a>
+    <a href="#project-gallery" class="text-black hover:text-gray-600">Portfolio</a>
+    <a href="#faq" class="text-black hover:text-gray-600">FAQs</a>
     <a href="./invisible-grills" class="text-black hover:text-gray-600">Invisible Grills</a>
   </div>
 
@@ -146,7 +147,7 @@
       in:fade={{ duration: 300 }}
       out:fade={{ duration: 300 }}
     >
-      <a href="/" class="text-black hover:text-gray-600 w-full border-b-2 py-5"
+      <a href="#how-it-works" class="text-black hover:text-gray-600 w-full border-b-2 py-5"
         >How it works</a
       >
 
@@ -227,12 +228,12 @@
       </div>
 
       <a
-        href="/"
+        href="#project-gallery"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >Portfolio</a
       >
       <a
-        href="/"
+        href="#faq"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
         >FAQs</a
       >

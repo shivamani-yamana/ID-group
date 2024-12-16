@@ -7,10 +7,10 @@
 >
   <!-- Our Highlights -->
   <div
-    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_69px_45px_40px] col-span-1 md:col-span-1 border-t-0"
+    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_60px_45px_40px] col-span-1 md:col-span-1 border-t-0"
   >
     <h2
-      class="text-[#292929] font-[500] text-[24px] leading-[120%] uppercase md:text-[48px] md:leading-[120%] font-inter"
+      class="text-[#292929] font-[500] text-[24px] leading-[120%] uppercase md:text-[48px] md:leading-[120%] font-inter-tight"
     >
       Our Highlights
     </h2>
@@ -18,7 +18,7 @@
 
   <!-- HighlightCard 1 -->
   <div
-    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_69px_45px_40px] border-t-0 md:border-t"
+    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_60px_45px_40px] border-t-0 md:border-t"
   >
     <HighlightCard
       para="We completed 300 projects with good 
@@ -29,23 +29,23 @@
 
   <!-- HighlightCard 2 -->
   <div
-    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_69px_45px_40px] border-t-2"
+    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_60px_45px_40px] border-t-2"
   >
     <HighlightCard
-      para="We completed 300 projects with good 
+      para="We completed 150 clients with good 
       reviews and great client satisfaction"
-      numberText="290+"
+      numberText="100+"
     />
   </div>
 
   <!-- HighlightCard 3 -->
   <div
-    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_69px_45px_40px] border-t-2"
+    class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_60px_45px_40px] border-t-2"
   >
     <HighlightCard
-      para="We completed 300 projects with good 
-      reviews and great client satisfaction"
-      numberText="290+"
+      para="We have 12 years of experience 
+      transforming space"
+      numberText="10+"
     />
   </div>
 </div>
