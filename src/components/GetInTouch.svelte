@@ -5,7 +5,7 @@
 </script>
 
 <div class="flex flex-col gap-4 md:gap-4 md:items-start md:self-stretch md:flex-col">
-    <div class="flex flex-col gap-8 sm:flex-col sm:gap-12 items-center justify-center md:items-start md:justify-start">
+    <div class="flex flex-col gap-8 sm:flex-col sm:gap-2 items-center justify-center md:items-start md:justify-start">
         {#if ButtonData}
         <button class="flex justify-center items-center gap-2.5 w-[98px] h-[30px] p-2.5 rounded-full border border-[#EAEAEA] bg-white" aria-label="Contact Us">
             <span class="text-[#707070] font-inter-tight text-[14px] font-normal leading-[140%]">{ButtonData}</span>

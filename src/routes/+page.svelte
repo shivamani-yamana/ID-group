@@ -15,6 +15,7 @@
   import Frame3 from "/src/lib/images/frame3.svg";
   import Frame4 from "/src/lib/images/frame4.svg";
   import Frame5 from "/src/lib/images/frame5.svg";
+  import ModularKitchen from "/src/lib/images/modular.png";
 
   interface CardData {
     Icon: string;
@@ -70,11 +71,11 @@
   import rightarrowicon from "../lib/icons/right_arrow.png";
   import InvisibleService from "../lib/images/invisible_service.png";
   import homeInteriorService from "../lib/images/home_interior.png";
+  import Navbar from "$components/Navbar.svelte";
 
   const ServiceCardData = [
     {
-      cardImage:
-        "https://s3-alpha-sig.figma.com/img/b874/b135/c7bf8d03db09915ec4108d8154c978d1?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=EaLpzRligVilvK2Meef~ShPx-Gx5UB5t4aYtefVvi0Uv30RltCuK97fLZzFYppofW4WIYtczK5dY-b6mKkkf2Vkku3xf~hOErfyZdLk3pOy9OtIr64UjX9uTXhxhA9F8aWKkFYBvsuhkrnx85LK~PDsIW4F8H16Ab8N-Hx0XspWlTt6DYvPKFc~M56eF~R~ojn~noesO1VG80oLdRO3zToRLjbwrNwG3m~dClzc2PMzsKdHArbxP8DWFF-72vR~zaAcyfzqsatK6R82hsAyrr7IgESaUNocNfml3C5k7ZXWcyoqmCI-U6Oe84wfDSleK8cyGsxYvBNWbFAL8XvYInQ__",
+      cardImage: ModularKitchen,
       heading: "Modular Kitchen Design",
       description:
         "Optimize your kitchen space with customized, stylish, and efficient modular designs.",
@@ -137,6 +138,8 @@
   <meta name="description" content="Svelte demo app" />
 </svelte:head>
 
+<Navbar />
+
 <section class="pt-24">
   <div class="flex flex-col md:gap-[60px] gap-[64px]">
     <div
@@ -174,22 +177,35 @@
         bgColor="#DFE0AF"
       />
     </div>
-
-    <OurServicesSection
+    <div id="service" class="pt-[90px] -mt-[90px]">
+      <OurServicesSection
       cardData={ServiceCardData}
       sectionTitle="Our Services"
       headerText="Explore Our Comprehensive<br/>Interior Design Services"
-    />
+      />
+    <div>
     <div class="w-full py-[0rem] md:py-[6.25rem]">
       <PhotosInstallationSection />
     </div>
-    <div class="w-full py-[0rem] md:py-[6.25rem]">
-      <ProjectGallerySection />
+
+    <div id="project-gallery" class="pt-[90px] -mt-[90px]">
+      <div class="w-full py-[0rem] md:py-[6.25rem]">
+        <ProjectGallerySection />
+      </div>
     </div>
+
     <div class="flex flex-col gap-[0px] sm:gap-[100px]">
-      <HowItWorks />
+      <section id="how-it-works" class="pt-[90px] -mt-[90px]">
+        <HowItWorks />
+      </section>
+
+
       <WhyChooseUs cardData={WhyUscardData} />
-      <Faq />
+
+
+      <section id="faq" class="pt-[90px] -mt-[90px]">
+        <Faq />
+      </section>
       <ContactUs />
       <div></div>
     </div>

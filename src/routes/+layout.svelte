@@ -8,8 +8,6 @@
 
 <div class="app">
   <ConsultaionPopup />
-
-  <Navbar />
   <main>
     {@render children()}
   </main>

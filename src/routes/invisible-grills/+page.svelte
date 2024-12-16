@@ -5,6 +5,12 @@
   import Frame2 from "/src/lib/images/frame2.svg";
   import Frame3 from "/src/lib/images/frame3.svg";
 
+  let services = [
+    { service: "Mosquito Net", link: "#service" },
+    { service: "Rolling Blind Grills", link: "#service" },
+    { service: "Invisible Grills", link: "#service" },
+  ];
+
   const cardData = [
     {
       Icon: Frame1,
@@ -44,6 +50,7 @@
   import HowDoesItWork from "$components/HowDoesItWork.svelte";
 
   import invisibleGrills from "$lib/images/invisible_grills.png";
+  import Navbar from "$components/Navbar.svelte";
 
   const invisibleGrillsType = [
     {
@@ -110,6 +117,8 @@
   <meta name="description" content="Invisible grills" />
 </svelte:head>
 
+<Navbar services={services}/>
+
 <section class="pt-24">
   <div class="flex flex-col">
     <div
@@ -135,22 +144,32 @@
       <div
         class="flex justify-start items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md"
       >
-        <img src="{invisibleGrills}" alt="" class="w-full">
+        <img src={invisibleGrills} alt="" class="w-full" />
       </div>
     </div>
     <div class="flex flex-col gap-[0px] sm:gap-[60px]">
-          <WhyChooseUs cardData={cardData}/>
-          <OurServicesSection cardData={invisibleGrillsType} sectionTitle="Types of Invisible Grills" headerText="Choose Your Ideal Invisible <br/> Grill Solution"/>
-          <ComparativeAnalysis />
-          <OurGuarantee />
-        </div>
-    <div class="w-full pt-[0rem] md:pt-[6.25rem] mb-[4rem] md:mb-[6.25rem]">
-      <PhotosOfInstalltionGrills />
+      <WhyChooseUs {cardData} />
+      <div id="service" class="pt-[100px] -mt-[100px]">
+        <OurServicesSection
+          cardData={invisibleGrillsType}
+          sectionTitle="Types of Invisible Grills"
+          headerText="Choose Your Ideal Invisible <br/> Grill Solution"
+        />
+      </div>
+      <ComparativeAnalysis />
+      <OurGuarantee />
+    </div>
+    <div id="project-gallery" class="pt-[100px] -mt-[100px] md:pt-[0px] md:mt-[0px]">
+      <div class="w-full pt-[0rem] md:pt-[6.25rem] mb-[4rem] md:mb-[6.25rem]">
+        <PhotosOfInstalltionGrills />
+      </div>
     </div>
     <div
       class="w-full py-[4rem] md:py-[2.5rem] mb-[4rem] md:mb-[6.25rem] bg-[#F3F0EB]"
     >
-      <HowDoesItWork />
+      <div id="how-it-works" class="pt-[140px] -mt-[140px]">
+        <HowDoesItWork />
+      </div>
     </div>
     <div class="w-full px-4 md:px-20">
       <TestimonialSectionLp
