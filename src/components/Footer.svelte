@@ -21,7 +21,7 @@
 </style>
 
 
-<footer class="flex max-w-[428px] h-[213px] px-4 pt-6 pb-0 justify-center rounded-t-[30px] rounded-b-none bg-[#F3F0EB] sm:rounded-t-none sm:max-w-full sm:px-20 sm:pt-10 sm:pb-0 sm:self-stretch sm:h-[393px] overflow-hidden">
+<footer class="flex max-w-[428px] px-4 pt-6 pb-0 justify-center rounded-t-[30px] rounded-b-none bg-[#F3F0EB] sm:rounded-t-none sm:max-w-full sm:px-20 sm:pt-10 sm:pb-0 sm:self-stretch overflow-hidden">
     <div class="flex w-full max-w-[396px] flex-col items-center gap-6 flex-shrink-0 sm:w-full sm:max-w-[1280px] sm:gap-10">
         <!-- FOOTER CONTENT -->
         <div class="flex flex-col items-center gap-6 self-stretch sm:items-start sm:gap-10">
@@ -65,10 +65,11 @@
         </div>
 
         <!-- FOOTER INDUS STUDIO-->
-        <div class="flex justify-between items-center self-stretch">
-            <p class="text-center font-playfairDisplay text-[54px] font-semibold uppercase custom-text-stroke lg:text-[178px]">
-                INDUS STUDIO
+        <div class="flex justify-center items-center self-stretch">
+            <p class="inline-block text-center font-playfairDisplay text-[48px] font-semibold uppercase custom-text-stroke sm:text-[70px] md:text-[108px] lg:text-[118px] xl:text-[154px] leading-[90%] m-0">
+              INDUS STUDIO
             </p>
-        </div>          
+          </div>
+                   
     </div>
 </footer>
