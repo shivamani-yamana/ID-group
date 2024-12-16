@@ -12,7 +12,7 @@
   // Show popup 10 seconds after the user enters the website
   setTimeout(() => {
     isVisible = true;
-  }, 10000);
+  }, 10);
 
   // Function to close the popup
   function closePopup() {
@@ -22,11 +22,11 @@
 
 {#if isVisible}
   <div
-    class="fixed z-[50] w-screen h-screen bg-black/45 backdrop-blur-[5px] flex items-center justify-center"
+    class="fixed z-[50] w-full h-screen bg-black/45 backdrop-blur-[5px] flex items-center justify-center p-2 md:px-0"
     transition:fade={{ duration: 500 }}
   >
     <div
-      class="flex flex-col md:flex-row w-[396px] h-[668px] items-center gap-[20px] flex-shrink-0 rounded-[10px] bg-white md:w-auto md:h-[428px] md:p-[20px] md:justify-center md:items-start md:gap-[34px]"
+      class="flex flex-col md:flex-row w-full h-[41.75rem] items-center gap-[20px] flex-shrink-0 rounded-[10px] bg-white md:w-auto md:h-[26.75rem] md:p-[20px] md:justify-center md:items-start md:gap-[34px]"
       transition:scale={{ duration: 500 }}
     >
       <!-- On mobile this 2nd -->
@@ -157,7 +157,7 @@
           Get a free design consultation with us
         </h2>
         <div
-          class="md:w-[18.25rem] md:hidden md:order-1 order-2 md:h-[24.25rem] h-[15rem] w-[22.75rem] flex items-center justify-center overflow-hidden rounded md:rounded-[5px]"
+          class="md:w-[18.25rem] md:hidden md:order-1 order-2 md:h-[24.25rem] h-[15rem] w-full flex items-center justify-center overflow-hidden rounded md:rounded-[5px] p-4"
         >
           <img src={imageURL} alt="Popup Illustration" />
         </div>

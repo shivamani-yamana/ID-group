@@ -96,6 +96,7 @@
       description:
         "Transform your living spaces with personalized interior solutions that blend beauty and functionality.",
       iconText: "Contact Us",
+      icon: rightarrowicon, // Another icon example
     },
   ];
 
@@ -141,7 +142,7 @@
 <Navbar />
 
 <section class="pt-24">
-  <div class="flex flex-col md:gap-[60px] gap-[64px]">
+  <div class="flex flex-col md:gap-[6.25rem] gap-[4rem]">
     <div
       class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
     >
@@ -170,44 +171,41 @@
       </div>
     </div>
     <OurHighlightsSection />
-    <div class="w-full px-4 md:px-20 py-[0rem] md:py-[6.25rem]">
+    <div class="w-full px-4 md:px-20 py-[0rem]">
       <TestimonialSectionLp
         testimonialHeader="Here’s what others have to say<br />about INDUS Studio"
         {testimonials}
         bgColor="#DFE0AF"
       />
     </div>
-    <div id="service" class="pt-[90px] -mt-[90px]">
+    <div id="service" class="">
       <OurServicesSection
-      cardData={ServiceCardData}
-      sectionTitle="Our Services"
-      headerText="Explore Our Comprehensive<br/>Interior Design Services"
+        cardData={ServiceCardData}
+        sectionTitle="Our Services"
+        headerText="Explore Our Comprehensive<br/>Interior Design Services"
       />
-    <div>
-    <div class="w-full py-[0rem] md:py-[6.25rem]">
+    </div>
+    <div class="w-full">
       <PhotosInstallationSection />
     </div>
 
-    <div id="project-gallery" class="pt-[90px] -mt-[90px]">
-      <div class="w-full py-[0rem] md:py-[6.25rem]">
+    <div id="project-gallery" class="">
+      <div class="w-full]">
         <ProjectGallerySection />
       </div>
     </div>
 
-    <div class="flex flex-col gap-[0px] sm:gap-[100px]">
-      <section id="how-it-works" class="pt-[90px] -mt-[90px]">
+    <div class="flex flex-col gap-[4rem] sm:gap-[6.25rem]">
+      <section id="how-it-works" class="">
         <HowItWorks />
       </section>
 
-
       <WhyChooseUs cardData={WhyUscardData} />
 
-
-      <section id="faq" class="pt-[90px] -mt-[90px]">
+      <section id="faq" class="">
         <Faq />
       </section>
       <ContactUs />
-      <div></div>
     </div>
   </div>
 </section>

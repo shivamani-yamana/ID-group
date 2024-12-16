@@ -12,6 +12,26 @@
     { service: "No Grills", link: "#service" },
     { service: "Design Consultation", link: "#service" },
   ];
+
+  let dropdownElement: HTMLElement; // Reference to dropdown container
+
+  const handleClickOutside = (event: MouseEvent) => {
+    const target = event.target as Node | null; // Explicitly assert the type of event.target
+    if (
+      !isMenuOpen &&
+      isServicesOpen == true &&
+      dropdownElement &&
+      !dropdownElement.contains(target)
+    ) {
+      isServicesOpen = false;
+    }
+  };
+
+  import { onMount, onDestroy } from "svelte";
+  onMount(() => {
+    document.addEventListener("click", handleClickOutside);
+    return () => document.removeEventListener("click", handleClickOutside);
+  });
 </script>
 
 <!-- Navbar Component -->
@@ -104,10 +124,12 @@
 
   <!-- Desktop Navigation Links -->
   <div class="hidden md:flex gap-10 items-center">
-    <a href="#how-it-works" class="text-black hover:text-gray-600">How it works</a>
+    <a href="#how-it-works" class="text-black hover:text-gray-600"
+      >How it works</a
+    >
 
     <!-- Services Dropdown -->
-    <div class="relative">
+    <div class="relative" bind:this={dropdownElement}>
       <button
         class="text-black hover:text-gray-600"
         on:click={() => (isServicesOpen = !isServicesOpen)}
@@ -122,17 +144,25 @@
           out:slide={{ duration: 300 }}
         >
           {#each services as { service, link }}
-            <a href={link} class="text-black hover:text-gray-600 px-4 py-2"
-              >{service}</a
+            <a
+              href={link}
+              class="text-black hover:text-gray-600 px-4 py-2"
+              on:click={() => {
+                isServicesOpen = false;
+              }}>{service}</a
             >
           {/each}
         </div>
       {/if}
     </div>
 
-    <a href="#project-gallery" class="text-black hover:text-gray-600">Portfolio</a>
+    <a href="#project-gallery" class="text-black hover:text-gray-600"
+      >Portfolio</a
+    >
     <a href="#faq" class="text-black hover:text-gray-600">FAQs</a>
-    <a href="./invisible-grills" class="text-black hover:text-gray-600">Invisible Grills</a>
+    <a href="./invisible-grills" class="text-black hover:text-gray-600"
+      >Invisible Grills</a
+    >
   </div>
 
   <!-- Contact Us Button -->
@@ -147,8 +177,12 @@
       in:fade={{ duration: 300 }}
       out:fade={{ duration: 300 }}
     >
-      <a href="#how-it-works" class="text-black hover:text-gray-600 w-full border-b-2 py-5"
-        >How it works</a
+      <a
+        href="#how-it-works"
+        class="text-black hover:text-gray-600 w-full border-b-2 py-5"
+        on:click={() => {
+          isMenuOpen = false;
+        }}>How it works</a
       >
 
       <!-- Services Dropdown (Mobile) -->
@@ -206,18 +240,25 @@
                 <a
                   href={link}
                   class="text-[#888] hover:text-gray-600 py-2 w-full flex items-center"
-                  >{service}</a
+                  on:click={() => {
+                    isMenuOpen = false;
+                  }}>{service}</a
                 >
               {:else if index === 0}
                 <a
                   href={link}
                   class="text-[#888] hover:text-gray-600 py-2 w-full flex items-center border-y-[0.5px]"
-                  >{service}</a
+                  on:click={() => {
+                    isMenuOpen = false;
+                  }}>{service}</a
                 >
               {:else}
                 <a
                   href={link}
                   class="text-[#888] hover:text-gray-600 py-2 w-full border-b-[0.5px] flex items-center"
+                  on:click={() => {
+                    isMenuOpen = false;
+                  }}
                 >
                   {service}
                 </a>
@@ -230,17 +271,23 @@
       <a
         href="#project-gallery"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
-        >Portfolio</a
+        on:click={() => {
+          isMenuOpen = false;
+        }}>Portfolio</a
       >
       <a
         href="#faq"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
-        >FAQs</a
+        on:click={() => {
+          isMenuOpen = false;
+        }}>FAQs</a
       >
       <a
-        href="./invisible-grills"
+        href="/invisible-grills"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
-        >Invisible Grills</a
+        on:click={() => {
+          isMenuOpen = false;
+        }}>Invisible Grills</a
       >
 
       <div class="w-full">

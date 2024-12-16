@@ -37,18 +37,20 @@
 
       <!-- Icon Section -->
       <div class="flex items-center gap-2">
-        <span
-          class="text-transparent bg-gradient-to-r from-[#5BD066] to-[#27B43E] bg-clip-text text-base font-medium leading-[140%] sm:text-sm sm:text-[#27B43E]"
-        >
-          {iconText}
-        </span>
-        {#if icon}
-          <img
-            src={icon}
-            alt={iconText ? `${iconText} icon` : "Icon"}
-            class="w-5 h-5"
-          />
-        {/if}
+        <a href="/" class="flex">
+          <span
+            class="text-transparent bg-gradient-to-r from-[#5BD066] to-[#27B43E] bg-clip-text text-base font-medium leading-[140%] sm:text-sm sm:text-[#27B43E]"
+          >
+            {iconText}
+          </span>
+          {#if icon}
+            <img
+              src={icon}
+              alt={iconText ? `${iconText} icon` : "Icon"}
+              class="w-5 h-5"
+            />
+          {/if}
+        </a>
       </div>
     </div>
   </div>

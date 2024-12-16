@@ -117,12 +117,12 @@
   <meta name="description" content="Invisible grills" />
 </svelte:head>
 
-<Navbar services={services}/>
+<Navbar {services} />
 
 <section class="pt-24">
-  <div class="flex flex-col">
+  <div class="flex flex-col md:gap-[6.25rem] gap-[4rem]">
     <div
-      class="flex flex-col gap-10 px-4 pt-[7px] pb-[7px] md:pt-10 md:pb-[60px] md:px-20 w-full justify-center"
+      class="flex flex-col gap-10 px-4 pt-[7px] md:pt-10 md:px-20 w-full justify-center"
     >
       <div
         class="text-[#292929] text-center md:text-left flex md:flex-row flex-col justify-between items-center w-full md:gap-0 gap-3"
@@ -142,34 +142,30 @@
         </p>
       </div>
       <div
-        class="flex justify-start items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md"
+        class="flex justify-start items-center self-stretch w-full md:h-[33.75rem] overflow-clip rounded-md"
       >
         <img src={invisibleGrills} alt="" class="w-full" />
       </div>
     </div>
-    <div class="flex flex-col gap-[0px] sm:gap-[60px]">
+    <div class="flex flex-col">
       <WhyChooseUs {cardData} />
-      <div id="service" class="pt-[100px] -mt-[100px]">
-        <OurServicesSection
-          cardData={invisibleGrillsType}
-          sectionTitle="Types of Invisible Grills"
-          headerText="Choose Your Ideal Invisible <br/> Grill Solution"
-        />
-      </div>
-      <ComparativeAnalysis />
-      <OurGuarantee />
     </div>
-    <div id="project-gallery" class="pt-[100px] -mt-[100px] md:pt-[0px] md:mt-[0px]">
-      <div class="w-full pt-[0rem] md:pt-[6.25rem] mb-[4rem] md:mb-[6.25rem]">
-        <PhotosOfInstalltionGrills />
-      </div>
+    <div id="service" class="">
+      <OurServicesSection
+        cardData={invisibleGrillsType}
+        sectionTitle="Types of Invisible Grills"
+        headerText="Choose Your Ideal Invisible <br/> Grill Solution"
+      />
     </div>
-    <div
-      class="w-full py-[4rem] md:py-[2.5rem] mb-[4rem] md:mb-[6.25rem] bg-[#F3F0EB]"
-    >
-      <div id="how-it-works" class="pt-[140px] -mt-[140px]">
-        <HowDoesItWork />
-      </div>
+    <ComparativeAnalysis />
+    <OurGuarantee />
+
+    <div class="w-full" id="project-gallery">
+      <PhotosOfInstalltionGrills />
+    </div>
+
+    <div id="how-it-works" class="w-full py-[4rem] md:py-[2.5rem] bg-[#F3F0EB]">
+      <HowDoesItWork />
     </div>
     <div class="w-full px-4 md:px-20">
       <TestimonialSectionLp
@@ -179,6 +175,5 @@
       />
     </div>
     <ContactUs />
-    <div></div>
   </div>
 </section>
