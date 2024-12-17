@@ -15,7 +15,7 @@
   class="flex items-center justify-between w-full flex-col md:flex-row gap-6 md:gap-0"
 >
   <div
-    class="w-[396px] md:w-[650px] h-[260px] md:h-[420px] flex items-center justify-center overflow-hidden rounded-lg"
+    class="w-full md:w-[650px] h-[260px] md:h-[420px] flex items-center justify-center overflow-hidden rounded-lg"
   >
     <CompareImageSlider {beforeImage} {afterImage} />
   </div>
@@ -32,7 +32,7 @@
           {challengeHeading}
         </h3>
         <p
-          class="text-[#545454] font-inter-tight font-inter font-light text-[14px] leading-[160%] md:text-[18px] md:leading-[160%]"
+          class="text-[#545454] font-inter-tight font-light text-[14px] leading-[160%] md:text-[18px] md:leading-[160%]"
         >
           {challengePara}
         </p>
