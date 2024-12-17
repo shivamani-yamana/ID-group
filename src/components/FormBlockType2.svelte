@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   export let Label = "Label";
   export let Value = "Value";
 
@@ -6,6 +6,13 @@
 
   import IndiaFlag from "/src/lib/images/india-flag.svg";
   import dropDown from "/src/lib/images/drop-down.svg";
+
+  // Correct event type for Svelte
+  function handlePhoneInput(event: Event) {
+    const inputElement = event.target as HTMLInputElement;
+    // Only allow digits in the input
+    inputValue = inputElement.value.replace(/[^0-9]/g, ""); // Remove any non-numeric characters
+  }
 </script>
 
 <div class="flex flex-col items-start gap-3">
@@ -23,8 +30,9 @@
         <img src={IndiaFlag} alt="India Flag" class="w-5 h-5" />
         <span
           class="text-[#9D9D9D] font-inter-tight font-light text-[12px] leading-[160%] sm:text-[16px] sm:leading-[160%]"
-          >+91</span
         >
+          +91
+        </span>
         <button>
           <img src={dropDown} alt="" class="w-[20px] h-[20px]" />
         </button>
@@ -36,10 +44,10 @@
       type="text"
       name=""
       placeholder={Value}
+      on:input={handlePhoneInput}
     />
   </div>
 
-  <!-- Make text black once the user has typed in -->
   <style>
     input:not(:placeholder-shown) {
       color: black;

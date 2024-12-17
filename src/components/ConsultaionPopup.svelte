@@ -176,6 +176,7 @@
             <button
               type="submit"
               class="text-white w-full font-inter-tight text-xs font-normal leading-[140%] sm:text-base sm:leading-[140%]"
+              on:click={closePopup}
             >
               Submit
             </button>
