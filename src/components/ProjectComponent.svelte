@@ -4,9 +4,7 @@
   import PreviousButton from "./PreviousButton.svelte";
   import VideoPlayer2 from "./VideoPlayer2.svelte";
 
-  const imgLink =
-    "https://s3-alpha-sig.figma.com/img/f3f9/caaf/8869d96b2b22b4dc09b9022b29ce890e?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A3eMlWjRAT8aE-cm83Q~-xCMB59w9gJ4qBjPpp-G1ZUlcRuh8Q5IiL024vqueBFWeeDs0nvBjHij~Gj0p7SHRIy3Mug-VcOI0m3-9w3zRoND635y2qRWgUFQvryvoQ5bvi~Do9TDB8gfiIJBjoPy-SVrSh6WvgWqIPe4CQNwjZqM~cq0FXLlsbXLaP~~lfF3qxKEws8GFc7JW5Sybqjn1g2CmTcjoZwWRPTyZ71hU0ZPZ6Qc-fMWZHr-Ui~0vojHbz-rEzSjsknGZjqcE6C6gZbSqQHfgPrKza5tlhEEk19gnKXkLeEXY1Re2VRRVd9Hsn3a6VGFNOoop5YPy6k2fw__";
-
+  import imgLink from "$lib/images/Project_Gallery.png";
   export let data: { name: string; description: string; projectUrl: string };
 
   let isModalOpen = false;
@@ -41,7 +39,7 @@
 <!-- Project Card -->
 <div
   class="h-[16rem] md:w-[50rem] md:h-[32.5rem] rounded-[10px] bg-cover relative overflow-clip bg-no-repeat"
-  style="background-image: url(https://s3-alpha-sig.figma.com/img/f3f9/caaf/8869d96b2b22b4dc09b9022b29ce890e?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=A3eMlWjRAT8aE-cm83Q~-xCMB59w9gJ4qBjPpp-G1ZUlcRuh8Q5IiL024vqueBFWeeDs0nvBjHij~Gj0p7SHRIy3Mug-VcOI0m3-9w3zRoND635y2qRWgUFQvryvoQ5bvi~Do9TDB8gfiIJBjoPy-SVrSh6WvgWqIPe4CQNwjZqM~cq0FXLlsbXLaP~~lfF3qxKEws8GFc7JW5Sybqjn1g2CmTcjoZwWRPTyZ71hU0ZPZ6Qc-fMWZHr-Ui~0vojHbz-rEzSjsknGZjqcE6C6gZbSqQHfgPrKza5tlhEEk19gnKXkLeEXY1Re2VRRVd9Hsn3a6VGFNOoop5YPy6k2fw__); width: calc(100vw - 32px)"
+  style="background-image: url({imgLink});"
 >
   <div
     class="absolute bottom-0 w-full md:h-[7.75rem] h-[7.25rem] z-10 p-6 pt-0 flex md:flex-row flex-col justify-between"
