@@ -2,7 +2,7 @@
   import CompareImageSlider from "./CompareImageSlider.svelte";
 </script>
 
-<div>
+<div class="w-full py-[4rem] md:py-[2.5rem] bg-[#F3F0EB]">
   <div
     class="px-4 md:px-20 flex justify-between flex-col md:flex-row justif-start md:items-center items-start md:justify-between gap-6 md:gap-auto"
   >

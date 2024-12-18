@@ -150,7 +150,7 @@
     <div class="flex flex-col">
       <WhyChooseUs {cardData} />
     </div>
-    <div id="service" class="">
+    <div id="service" class="-mt-[100px] pt-[100px]">
       <OurServicesSection
         cardData={invisibleGrillsType}
         sectionTitle="Types of Invisible Grills"
@@ -160,11 +160,11 @@
     <ComparativeAnalysis />
     <OurGuarantee />
 
-    <div class="w-full" id="project-gallery">
+    <div class="-mt-[100px] pt-[100px]" id="project-gallery">
       <PhotosOfInstalltionGrills />
     </div>
 
-    <div id="how-it-works" class="w-full py-[4rem] md:py-[2.5rem] bg-[#F3F0EB]">
+    <div id="how-it-works" class="-mt-[100px] pt-[100px]">
       <HowDoesItWork />
     </div>
     <div class="w-full px-4 md:px-20">

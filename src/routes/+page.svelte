@@ -178,7 +178,7 @@
         bgColor="#DFE0AF"
       />
     </div>
-    <div id="service" class="">
+    <div id="service" class="-mt-[100px] pt-[100px]">
       <OurServicesSection
         cardData={ServiceCardData}
         sectionTitle="Our Services"
@@ -189,20 +189,22 @@
       <PhotosInstallationSection />
     </div>
 
-    <div id="project-gallery" class="">
+    <div id="project-gallery" class="-mt-[100px] pt-[100px]">
       <div class="w-full]">
         <ProjectGallerySection />
       </div>
     </div>
 
     <div class="flex flex-col gap-[4rem] sm:gap-[6.25rem]">
-      <section id="how-it-works" class="">
+      <!-- Applying negative margin (-mt-[100px]) and padding-top (pt-[100px]) to adjust the navigation alignment when linking to the "how-it-works" section.
+       This ensures the section header is correctly positioned below a fixed header or navbar, improving the visual alignment and user experience. -->
+      <section id="how-it-works" class="-mt-[100px] pt-[100px]">
         <HowItWorks />
       </section>
 
       <WhyChooseUs cardData={WhyUscardData} />
 
-      <section id="faq" class="">
+      <section id="faq" class="-mt-[100px] pt-[100px]">
         <Faq />
       </section>
       <ContactUs />
