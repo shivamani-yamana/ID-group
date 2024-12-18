@@ -2,6 +2,7 @@
   import { fade, slide } from "svelte/transition";
   import idstudioLogo from "../lib/images/Idstudio_logo.svg";
   import ContactUsButton from "./ContactUsButton.svelte";
+  import { page } from '$app/stores';  
 
   let isMenuOpen = false; // State for mobile menu
   let isServicesOpen = false; // State for services dropdown
@@ -159,7 +160,9 @@
     <a href="#project-gallery" class="text-black hover:text-gray-600"
       >Portfolio</a
     >
-    <a href="#faq" class="text-black hover:text-gray-600">FAQs</a>
+    {#if $page.url.pathname != "/invisible-grills"}
+      <a href="#faq" class="text-black hover:text-gray-600">FAQs</a>
+    {/if}
     <a href="./invisible-grills" class="text-black hover:text-gray-600"
       >Invisible Grills</a
     >
@@ -275,6 +278,7 @@
           isMenuOpen = false;
         }}>Portfolio</a
       >
+      {#if $page.url.pathname != "/invisible-grills"}
       <a
         href="#faq"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
@@ -282,6 +286,7 @@
           isMenuOpen = false;
         }}>FAQs</a
       >
+      {/if}
       <a
         href="/invisible-grills"
         class="text-black hover:text-gray-600 w-full text-start border-b-[0.5px] py-5"
