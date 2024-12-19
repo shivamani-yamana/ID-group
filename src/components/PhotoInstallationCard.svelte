@@ -12,7 +12,7 @@
 </script>
 
 <div
-  class="flex items-center justify-between w-full flex-col md:flex-row gap-6 md:gap-0"
+  class="flex items-center justify-between w-full flex-col lg:flex-row gap-6 lg:gap-10"
 >
   <div
     class="w-full md:w-[650px] h-[260px] md:h-[420px] flex items-center justify-center overflow-hidden rounded-lg"

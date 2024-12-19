@@ -22,7 +22,7 @@
 
 {#if isVisible}
   <div
-    class="fixed z-[50] w-full h-screen bg-black/45 backdrop-blur-[5px] flex items-center justify-center p-2 md:px-0"
+    class="fixed z-[75] w-full h-screen bg-black/45 backdrop-blur-[5px] flex items-center justify-center p-2 md:px-0"
     transition:fade={{ duration: 500 }}
   >
     <div

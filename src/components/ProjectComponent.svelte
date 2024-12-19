@@ -38,7 +38,7 @@
 
 <!-- Project Card -->
 <div
-  class="h-[16rem] md:w-[50rem] md:h-[32.5rem] rounded-[10px] bg-cover relative overflow-clip bg-no-repeat"
+  class="w-[376px] h-[16rem] md:w-[50rem] md:h-[32.5rem] rounded-[10px] bg-cover relative overflow-clip bg-no-repeat"
   style="background-image: url({imgLink});"
 >
   <div

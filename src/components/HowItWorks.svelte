@@ -28,7 +28,7 @@ import Img2 from "/src/lib/images/hiw_img2.svg";
 import Img3 from "/src/lib/images/hiw_img3.svg";
 
 </script>
-<div class="flex flex-col w-full gap-[24px] items-center justify-center p-[24px_0px] md:h-auto md:flex-row md:p-[60px_80px_60px_0px] md:self-stretch md:justify-start md:items-start md:gap-[100px] bg-[#DFE0AF]">
+<div class="flex flex-col w-full gap-[24px] items-center justify-center p-[24px_0px] lg:h-auto lg:flex-row lg:p-[60px_80px_60px_0px] lg:self-stretch lg:justify-start lg:items-start lg:gap-[100px] bg-[#DFE0AF]">
     <div class="flex flex-col gap-[12px] md:gap-[20px] md:justify-between md:item" style="max-width: fit-content;">
         <img class="w-full h-auto" src="{Img1}" alt="Main">
         <div class="flex gap-3 md:gap-5">

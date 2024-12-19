@@ -4,7 +4,7 @@
 
 <button
   on:click={onNext}
-  class="flex justify-center items-center border-2 border-[#292929] bg-white rounded-full w-[60px] h-[60px] p-[10px] focus:outline-none hover:bg-[#292929] hover:border-[#292929] transition-all duration-500 ease-in-out"
+  class="z-30 flex justify-center items-center border-2 border-[#292929] bg-white rounded-full w-[60px] h-[60px] p-[10px] focus:outline-none hover:bg-[#292929] hover:border-[#292929] transition-all duration-500 ease-in-out"
   aria-label="Next testimonial"
 >
   <svg

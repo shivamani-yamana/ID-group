@@ -1,7 +1,7 @@
 <script>
     import idstudioLogo from "/src/lib/images/Idstudio_logo.svg";
     import upArrow from "/src/lib/images/up-arrow.svg";
-    let anchorStyle = "{text-[#292929] font-inter-tight text-[12px] font-light leading-[14.4px] lg:text-[20px] lg:leading-[28px] lg:font-light}";
+    let anchorStyle = "{text-[#292929] font-inter-tight text-[12px] font-light leading-[14.4px] lg:text-[18px] lg:leading-[28px] lg:font-light}";
 </script>
 
 <style>
@@ -49,7 +49,7 @@
     
             <!-- FOOTER ANCHOR TAGS -->
             <div class="flex flex-col items-center gap-6 self-stretch sm:flex-row sm:justify-between sm:items-center sm:gap-0">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-5">
                     <a href="/" class="{anchorStyle}">How it works</a>
                     <a href="/" class="{anchorStyle}">Our Services</a>
                     <a href="/" class="{anchorStyle}">Portfolio</a>

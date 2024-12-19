@@ -10,7 +10,7 @@
     class="flex items-center p-[12px_16px_11px_16px] md:p-[45px_60px_45px_40px] col-span-1 md:col-span-1 border-t-0"
   >
     <h2
-      class="text-[#292929] font-[500] text-[24px] leading-[120%] uppercase md:text-[48px] md:leading-[120%] font-inter-tight"
+      class="text-[#292929] font-[500] text-[24px] leading-[120%] uppercase lg:text-[48px] lg:leading-[120%] font-inter-tight"
     >
       Our Highlights
     </h2>
