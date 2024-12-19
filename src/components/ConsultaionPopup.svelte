@@ -1,7 +1,26 @@
 <script lang="ts">
   import { fade, scale } from "svelte/transition";
   import FormBlockType1 from "./FormBlockType1.svelte";
-  import FormBlockType2 from "./FormBlockType2.svelte";
+
+  export let Label = "Phone No";
+  export let Value = "000-000-0000";
+
+  let inputValue = "";
+  let errorMessage = "";
+
+  import IndiaFlag from "/src/lib/images/india-flag.svg";
+  import dropDown from "/src/lib/images/drop-down.svg";
+
+  function validatePhoneNumber() {
+    if (inputValue.length !== 10) {
+      errorMessage = "10 Digits Phone Number required.";
+    } else {
+      errorMessage = "";
+      // Proceed with form submission
+      alert("Form submitted successfully!");
+      closePopup();
+    }
+  }
 
   export let imageURL =
     "https://s3-alpha-sig.figma.com/img/fc80/1341/f5898bff8b3548fbf0656daf279b62f1?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=STnPzsiN6Ja4Jw2Aco7QWOt~vGRcYXWv1LKuIMhNoiwABwmo0JUIo6JdAj82keAetLmAPLUKSMEfVssMbgqmF8NqD6r26sTNyT-Wh2IsVuFPE5tuyB0vhj70Abo~zp028gUgGTSUWiYxjZF25yaqYYMmUbJbvGIXGwyetLeuhVTtscddUXWIWd0fREiYXGxLl4sOJoTJEcsr4NnpszTwppdN7rf~2yF~4bjFbap9NEZ4AXc3b2326ENuUMI~2TOQathJBT6wbcMlJbxPpGJPVNpaShqPPDyqiFuaNAABA78tgGRIVeMaZ4pkJCOVC7PjNQAEyXuT~ifaD6eHbdaEmQ__";
@@ -167,7 +186,49 @@
         >
           <div class="flex flex-col gap-5 md:scale-90 w-full">
             <FormBlockType1 Label="Name" Value="John Doe" />
-            <FormBlockType2 Label="Phone No" Value="000-000-0000" />
+            <div class="flex flex-col items-start gap-3">
+              <div class="flex gap-3 justify-center items-center">
+                <span
+                  class="text-[#292929] font-inter-tight text-sm leading-[160%] sm:text-base sm:leading-[160%]"
+                >
+                  {Label}
+                </span>
+      
+                {#if errorMessage}
+                  <span class="text-red-500 text-xs sm:text-sm">{errorMessage}</span>
+                {/if}
+              </div>
+      
+              <div
+                class="flex w-full max-w-[348px] h-[48px] items-center rounded-[4px] border-[1px] border-[#0000001A] divide-x-2 sm:max-w-[546px] sm:h-[50px] sm:rounded-[6px] sm:border-[1px] sm:border-[#0000001A] sm:self-stretch"
+              >
+                <div class="flex w-[89px] h-[50px] items-center gap-[8px] flex-wrap">
+                  <div class="flex items-center gap-[4px] p-[10px_8px]">
+                    <img src={IndiaFlag} alt="India Flag" class="w-5 h-5" />
+                    <span
+                      class="text-[#9D9D9D] font-inter-tight font-light text-[12px] leading-[160%] sm:text-[16px] sm:leading-[160%]"
+                    >
+                      +91
+                    </span>
+                    <!-- <button>
+                      <img src={dropDown} alt="" class="w-[20px] h-[20px]" />
+                      </button> -->
+                  </div>
+                </div>
+                <input
+                  class="text-[#9D9D9D] w-full h-full px-[10px] font-inter-tight font-light text-[12px] leading-[140%] sm:text-[14px] focus:outline-none focus:ring-2 focus:ring-blue-500 sm:leading-[140%] focus:text-black"
+                  bind:value={inputValue}
+                  type="text"
+                  placeholder={Value}
+                />
+              </div>
+      
+              <style>
+                input:not(:placeholder-shown) {
+                  color: black;
+                }
+              </style>
+            </div>
           </div>
           <!-- on mobile this 5th -->
           <div
@@ -176,7 +237,7 @@
             <button
               type="submit"
               class="text-white w-full font-inter-tight text-xs font-normal leading-[140%] sm:text-base sm:leading-[140%]"
-              on:click={closePopup}
+              on:click={validatePhoneNumber}
             >
               Submit
             </button>
