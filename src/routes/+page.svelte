@@ -81,6 +81,7 @@
       description:
         "Optimize your kitchen space with customized, stylish, and efficient modular designs.",
       iconText: "Contact Us",
+      link: "#contact",
       icon: rightarrowicon, // Passing as inline SVG
     },
     {
@@ -88,7 +89,8 @@
       heading: "Invisible Grills ",
       description:
         "Enjoy unobstructed views and enhanced safety with our sleek, durable invisible grills.",
-      iconText: "Contact Us",
+      iconText: "Learn More",
+      link: "/invisible-grills", // Link to a specific section
       icon: rightarrowicon, // Another icon example
     },
     {
@@ -97,6 +99,7 @@
       description:
         "Transform your living spaces with personalized interior solutions that blend beauty and functionality.",
       iconText: "Contact Us",
+      link: "#contact",
       icon: rightarrowicon, // Another icon example
     },
   ];
@@ -208,7 +211,9 @@
       <section id="faq" class="-mt-[100px] pt-[100px]">
         <Faq />
       </section>
-      <ContactUs />
+      <div id="contact" class="-mt-[100px] pt-[100px]">  
+        <ContactUs />
+      </div>
     </div>
   </div>
 </section>

@@ -4,6 +4,7 @@
   export let description: string;
   export let icon: string; // Icon as an image
   export let iconText: string;
+  export let link: string;
 </script>
 
 <div class="flex flex-col justify-center items-center p-5 rounded-lg bg-white">
@@ -37,7 +38,7 @@
 
       <!-- Icon Section -->
       <div class="flex items-center gap-2">
-        <a href="/" class="flex">
+        <a href="{link}" class="flex">
           <span
             class="text-transparent bg-gradient-to-r from-[#5BD066] to-[#27B43E] bg-clip-text text-base font-medium leading-[140%] sm:text-sm sm:text-[#27B43E]"
           >
