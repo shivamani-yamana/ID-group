@@ -138,7 +138,7 @@
     display: none; /* For Chrome, Safari, and Opera */
   }
 
-  @media (min-width: 768px) and (max-width: 1279px) {
+  @media (min-width: 1020px) and (max-width: 1279px) {
     .scroll-card {
       width: calc(50% - 16px); /* Two cards per row, with a gap */
     }

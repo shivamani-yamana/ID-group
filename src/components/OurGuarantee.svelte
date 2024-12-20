@@ -9,7 +9,7 @@
   class="flex max-w-[428px] items-center justify-center px-4 rounded-t-[30px] rounded-b-none sm:rounded-t-none sm:max-w-full sm:px-20 sm:self-stretch"
 >
   <div
-    class="flex flex-col-reverse w-full gap-6 justify-between items-center sm:items-start max-w-[1280px] md:flex-row sm:gap-6"
+    class="flex flex-col-reverse w-full gap-6 justify-between items-center sm:items-start max-w-[1280px] lg:flex-row sm:gap-6"
   >
     <div
       class="flex flex-col gap-[24px] items-start sm:align-self-stretch lg:w-[492px] lg:gap-[40px] lg:items-start lg:flex-shrink-0"
@@ -46,7 +46,7 @@
           <div class="flex gap-2 items-center w-[50%]">
             <img class="w-[24px] h-[24px]" src={circleTick} alt="" />
             <p
-              class="text-[#292929] font-inter-tight text-[14px] md:text-[20px] font-[400] leading-[160%]"
+              class="text-[#292929] font-inter-tight text-[14px] lg:text-[18px] font-[400] leading-[160%]"
             >
               Unobstructed views
             </p>
@@ -54,7 +54,7 @@
           <div class="flex gap-2 items-center w-[50%]">
             <img class="w-[24px] h-[24px]" src={circleTick} alt="" />
             <p
-              class="text-[#292929] font-inter-tight text-[14px] md:text-[20px] font-[400] leading-[160%]"
+              class="text-[#292929] font-inter-tight text-[14px] lg:text-[18px] font-[400] leading-[160%]"
             >
               User-friendly Maintainance
             </p>
@@ -64,7 +64,7 @@
           <div class="flex gap-2 items-center w-[50%]">
             <img class="w-[24px] h-[24px]" src={circleTick} alt="" />
             <p
-              class="text-[#292929] font-inter-tight text-[14px] md:text-[20px] font-[400] leading-[160%]"
+              class="text-[#292929] font-inter-tight text-[14px] lg:text-[18px] font-[400] leading-[160%]"
             >
               Top-tier Designs
             </p>
@@ -72,7 +72,7 @@
           <div class="flex gap-2 items-center w-[50%]">
             <img class="w-[24px] h-[24px]" src={circleTick} alt="" />
             <p
-              class="text-[#292929] font-inter-tight text-[14px] md:text-[20px] font-[400] leading-[160%]"
+              class="text-[#292929] font-inter-tight text-[14px] lg:text-[18px] font-[400] leading-[160%]"
             >
               Maximum Safety
             </p>
@@ -82,7 +82,7 @@
       <ContactUsButton />
     </div>
     <div
-      class="flex justify-center items-center self-stretch w-full md:w-[600px] md:h-[412px] overflow-clip rounded-md"
+      class="flex items-center justify-center self-stretch w-full lg:w-[600px] lg:h-[412px] overflow-clip rounded-md"
     >
       <VideoPlayer
         videoLink="https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/ffd0/a01b/-d551-49c2-aa7b-5f9196e602dc?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l8hzfFyelU779viIAScNTNEsthOFbNYhqPFZlFuWNXGzWqbTl~ZIfaRTEsJOg-Qge9q5mtx5CUDoMHuYYTPe3dmOj0hbLoACKJgMwYBrcxUqgXUpFm17D1VFYLftGOiiS9UcjmpSaPShysJXQJNUevAOFvuzjo-1JmhQAtUaMZ-tSMkzbRvDXZ8xY6S6vLsXTjDMfKx2IXbXtzQcWVQDjA~TXy0sPa69O9FqPAOQkGejJDBXcy8n1BmEpDRzXZu-5y5Zo026UXzIUbGepAsDSWnlFkVJXC7RrLQZI7W4xKygbjbRUo99fVdEhiQFdS8-UAaY7EAoT9xbI8OkNDSKZw__"

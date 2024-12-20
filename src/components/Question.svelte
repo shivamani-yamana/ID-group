@@ -45,7 +45,7 @@
         />
       </div>
       <p
-        class="flex ml-[20px] text-[12px] text-[#707070] font-light leading-[1.4] font-inter-tight md:text-[16px]"
+        class="flex ml-[20px] text-start text-[12px] text-[#707070] font-light leading-[1.4] font-inter-tight md:text-[16px]"
       >
         {ParagraphData}
       </p>

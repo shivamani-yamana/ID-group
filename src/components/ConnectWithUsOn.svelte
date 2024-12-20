@@ -7,7 +7,7 @@
     import Pinterest from "/src/lib/images/pinterest_icon.svg";
 </script>
 
-<div class="flex flex-col gap-6 sm:gap-6 lg:gap-6 items-center sm:items-start">
+<div class="flex flex-col gap-6 sm:gap-6 lg:gap-6 items-center lg:items-start">
     <p class="text-[#292929] font-light font-inter-tight text-[16px] italic leading-[25.2px] sm:text-[18px] sm:leading-[22.4px]">
         CONNECT WITH US ON:
     </p>

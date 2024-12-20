@@ -9,19 +9,19 @@
   </script>
   
   <div
-    class="grid grid-cols-6 md:grid-cols-12 gap-4 md:gap-6 p-6 md:p-12 rounded-lg h-[430px] md:h-[460px] w-full flex-shrink-0"
+    class="grid grid-cols-6 lg:grid-cols-12 gap-4 md:gap-6 p-6 md:p-12 rounded-lg h-[430px] sm:h-[700px] lg:h-[460px] w-full flex-shrink-0"
     style="background: {backgroundColor}"
   >
     <!-- Video Section -->
     <div
-      class="col-span-6 md:col-span-7 flex justify-center items-center bg-[#292929] rounded-t-lg md:rounded-l-lg md:rounded-none overflow-hidden h-max md:h-auto"
+      class="col-span-6 lg:col-span-7 flex justify-center items-center bg-[#292929] rounded-t-lg md:rounded-l-lg md:rounded-none overflow-hidden h-max lg:h-auto"
     >
       <VideoPlayer {videoLink} />
     </div>
   
     <!-- Testimonial Section -->
     <div
-      class="col-span-6 md:col-span-5 flex flex-col justify-between items-start gap-6 p-4 py-5 md:p-10 bg-white rounded-b-lg md:rounded-r-lg md:rounded-none"
+      class="col-span-6 lg:col-span-5 flex flex-col justify-between items-start gap-6 p-4 py-5 md:p-10 bg-white rounded-b-lg md:rounded-r-lg md:rounded-none"
     >
       <blockquote
         class="text-[#292929] font-[400] font-inter italic text-[14px] leading-[160%] md:text-[20px] md:leading-relaxed tracking-[-0.28px] text-start"

@@ -16,6 +16,7 @@
   import Frame4 from "/src/lib/images/frame4.svg";
   import Frame5 from "/src/lib/images/frame5.svg";
   import ModularKitchen from "/src/lib/images/modular.png";
+  import homeVideo from "$lib/videos/home.mp4";
 
   interface CardData {
     Icon: string;
@@ -80,6 +81,7 @@
       description:
         "Optimize your kitchen space with customized, stylish, and efficient modular designs.",
       iconText: "Contact Us",
+      link: "#contact",
       icon: rightarrowicon, // Passing as inline SVG
     },
     {
@@ -87,7 +89,8 @@
       heading: "Invisible Grills ",
       description:
         "Enjoy unobstructed views and enhanced safety with our sleek, durable invisible grills.",
-      iconText: "Contact Us",
+      iconText: "Learn More",
+      link: "/invisible-grills", // Link to a specific section
       icon: rightarrowicon, // Another icon example
     },
     {
@@ -96,9 +99,13 @@
       description:
         "Transform your living spaces with personalized interior solutions that blend beauty and functionality.",
       iconText: "Contact Us",
+      link: "#contact",
       icon: rightarrowicon, // Another icon example
     },
   ];
+
+
+  import testimonialVideo1 from "$lib/videos/testimonial.mp4";
 
   const testimonials = [
     {
@@ -108,8 +115,7 @@
       customerContext: "Founder, InnovaTech Solutions",
       imageUrl:
         "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-      videoLink:
-        "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=obIW7hjJKVaz1D05wGvhzZMIvt-oe01ZJO2XU17AwEGi2T6L1UoOZZTz8SYg9~8SXdeXxyDkJsWVjZLhmrScyzkxyhIkWSaU9z3CDaJzT3QjbLHtjIxJHXmbgm9MlmPUT870v3nHx~ZIlLXEn0f1bxEEn1WKindYYQJP0f8BIXwlIw04nstwGrUcy6Ybzm-QqHL8BlhFBXbtAmuYI72SXjIrO0OAY9bCw2FfVXyzJ~DNGX9zd1vw65eDrLce~CAl~Ypa~B3Fq9LN3BCW7us~zZ8fw1rlrqmEJIU0KearWSpaK0ER3DigxWhxLqCesM6MGmKke-HzqUjQv5zJMEpp-w__",
+      videoLink: testimonialVideo1,
     },
     {
       testimonialText:
@@ -118,8 +124,7 @@
       customerContext: "CEO, Bright Future Inc.",
       imageUrl:
         "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-      videoLink:
-        "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c",
+      videoLink: testimonialVideo1,
     },
     {
       testimonialText:
@@ -128,8 +133,7 @@
       customerContext: "Founder, TechWave",
       imageUrl:
         "https://s3-alpha-sig.figma.com/img/37fc/d134/0ce8427e5730e78585b432b1eea5d095",
-      videoLink:
-        "https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/52df/6aa8/-4748-4bca-8ee5-3fb2feda8c2c",
+      videoLink: testimonialVideo1,
     },
   ];
 </script>
@@ -166,7 +170,7 @@
         class="flex justify-center items-center self-stretch w-full md:h-[540px] overflow-clip rounded-md"
       >
         <VideoPlayer
-          videoLink="https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/ffd0/a01b/-d551-49c2-aa7b-5f9196e602dc?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l8hzfFyelU779viIAScNTNEsthOFbNYhqPFZlFuWNXGzWqbTl~ZIfaRTEsJOg-Qge9q5mtx5CUDoMHuYYTPe3dmOj0hbLoACKJgMwYBrcxUqgXUpFm17D1VFYLftGOiiS9UcjmpSaPShysJXQJNUevAOFvuzjo-1JmhQAtUaMZ-tSMkzbRvDXZ8xY6S6vLsXTjDMfKx2IXbXtzQcWVQDjA~TXy0sPa69O9FqPAOQkGejJDBXcy8n1BmEpDRzXZu-5y5Zo026UXzIUbGepAsDSWnlFkVJXC7RrLQZI7W4xKygbjbRUo99fVdEhiQFdS8-UAaY7EAoT9xbI8OkNDSKZw__"
+          videoLink="{homeVideo}"
         />
       </div>
     </div>
@@ -190,7 +194,7 @@
     </div>
 
     <div id="project-gallery" class="-mt-[100px] pt-[100px]">
-      <div class="w-full]">
+      <div class="w-full">
         <ProjectGallerySection />
       </div>
     </div>
@@ -207,7 +211,9 @@
       <section id="faq" class="-mt-[100px] pt-[100px]">
         <Faq />
       </section>
-      <ContactUs />
+      <div id="contact" class="-mt-[100px] pt-[100px]">  
+        <ContactUs />
+      </div>
     </div>
   </div>
 </section>
