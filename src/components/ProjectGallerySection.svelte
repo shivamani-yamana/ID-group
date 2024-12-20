@@ -3,6 +3,9 @@
   import NextButton from "./NextButton.svelte";
   import PreviousButton from "./PreviousButton.svelte";
   import ProjectComponent from "./ProjectComponent.svelte";
+  import imgLink from "$lib/images/Project_Gallery.png";
+  import VideoLink from "$lib/videos/home.mp4";
+
 
   let tabs = [
     { id: 0, name: "All Projects" },
@@ -12,7 +15,7 @@
 
   const projects: Record<
     number,
-    { name: string; description: string; projectUrl: string }[]
+    { name: string; description: string; projectUrl: string; videoOrImage: Array<string> }[]
   > = {
     0: [
       {
@@ -20,20 +23,23 @@
         description:
           "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna dolore",
         projectUrl: "/",
+        videoOrImage: [VideoLink, imgLink, imgLink, imgLink, VideoLink, imgLink],
       },
-      { name: "Project 2", description: "Description 2", projectUrl: "/" },
-      { name: "Project 3", description: "Description 3", projectUrl: "/" },
+      { name: "Project 2", description: "Description 2", projectUrl: "/", videoOrImage: [VideoLink, imgLink, imgLink, imgLink] },
+      { name: "Project 3", description: "Description 3", projectUrl: "/", videoOrImage: [VideoLink, imgLink, imgLink, imgLink] },
     ],
     1: [
       {
         name: "Modular Kitchen 1",
         description: "Description 1",
         projectUrl: "/",
+        videoOrImage: [VideoLink, imgLink, imgLink, imgLink],
       },
       {
         name: "Modular Kitchen 2",
         description: "Description 2",
         projectUrl: "/",
+        videoOrImage: [VideoLink, imgLink, imgLink, imgLink],
       },
     ],
     2: [
@@ -41,11 +47,13 @@
         name: "Home Interior 1",
         description: "Description 1",
         projectUrl: "/",
+        videoOrImage: [VideoLink, imgLink, imgLink, imgLink],
       },
       {
         name: "Home Interior 2",
         description: "Description 2",
         projectUrl: "/",
+        videoOrImage: [VideoLink, imgLink, imgLink, imgLink],
       },
     ],
   };
