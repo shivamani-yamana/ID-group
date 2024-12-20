@@ -5,6 +5,7 @@
   import VideoPlayer2 from "./VideoPlayer2.svelte";
 
   import imgLink from "$lib/images/Project_Gallery.png";
+  import ProjectPopUp from "./ProjectPopUp.svelte";
   export let data: { name: string; description: string; projectUrl: string };
 
   let isModalOpen = false;
@@ -76,7 +77,10 @@
 
 <!-- Modal -->
 {#if isModalOpen}
-  <div
+  <ProjectPopUp {data} {closeModal} />
+{/if}
+
+<!-- <div
     id="modal"
     class="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm"
     role="dialog"
@@ -112,13 +116,11 @@
       </p>
       <div class="p-[0px_16px] md:p-[0px_32px]">
         <div class="flex space-x-4 flex-col md:flex-row">
-          <!-- Main Video Section -->
           <div class="relative w-full md:w-[calc(100%-238px)]">
             <VideoPlayer2
               videoLink="https://s3-figma-videos-production-sig.figma.com/video/1246348018179354930/TEAM/ffd0/a01b/-d551-49c2-aa7b-5f9196e602dc?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=l8hzfFyelU779viIAScNTNEsthOFbNYhqPFZlFuWNXGzWqbTl~ZIfaRTEsJOg-Qge9q5mtx5CUDoMHuYYTPe3dmOj0hbLoACKJgMwYBrcxUqgXUpFm17D1VFYLftGOiiS9UcjmpSaPShysJXQJNUevAOFvuzjo-1JmhQAtUaMZ-tSMkzbRvDXZ8xY6S6vLsXTjDMfKx2IXbXtzQcWVQDjA~TXy0sPa69O9FqPAOQkGejJDBXcy8n1BmEpDRzXZu-5y5Zo026UXzIUbGepAsDSWnlFkVJXC7RrLQZI7W4xKygbjbRUo99fVdEhiQFdS8-UAaY7EAoT9xbI8OkNDSKZw__"
             />
 
-            <!-- Navigation Buttons -->
             <div class="absolute left-4 top-1/2 transform -translate-y-1/2">
               <PreviousButton onPrevious={() => {}} />
             </div>
@@ -127,7 +129,6 @@
             </div>
           </div>
 
-          <!-- Thumbnail Gallery -->
           <div
             class="w-full md:w-[238px] space-y-4 flex md:flex-col gap-[10px] md:gap-[4px]"
           >
@@ -140,7 +141,6 @@
                 class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
-            <!-- More Thumbnails -->
             <div
               class="relative -left-4 md:-left-0 w-[114px] h-[76px] md:w-full md:h-[156px]"
             >
@@ -150,7 +150,6 @@
                 class="w-full h-auto object-cover rounded-lg cursor-pointer hover:scale-105 transition-transform"
               />
             </div>
-            <!-- 10+ Thumbnails -->
             <div
               class="relative flex items-center justify-center w-[114px] -left-4 md:-left-0 md:w-full h-[76px] md:h-[156px]"
             >
@@ -168,5 +167,4 @@
         </div>
       </div>
     </div>
-  </div>
-{/if}
+  </div> -->

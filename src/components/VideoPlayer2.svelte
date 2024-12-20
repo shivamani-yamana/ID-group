@@ -33,7 +33,7 @@
     <video
       bind:this={videoElement}
       src={videoLink}
-      class="w-full h-[240px] md:h-[508px] bg-black"
+      class="w-full h-[240px] lg:h-[508px] bg-black"
       on:play={() => (isPlaying = true)}
       on:pause={() => (isPlaying = false)}
       on:waiting={() => (isBuffering = true)}
